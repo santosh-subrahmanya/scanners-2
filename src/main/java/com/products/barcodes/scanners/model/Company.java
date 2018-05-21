@@ -16,11 +16,13 @@ public class Company {
 	private String id;
 	private String name;
 	private String description;
+	private String imageUrl;
 	
-	public Company(String id, String name, String description) {
+	public Company(String id, String name, String description, String imageUrl) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
+		this.imageUrl = imageUrl;
 	}
 	
 	public String getId() {
@@ -46,5 +48,14 @@ public class Company {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageURL(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+	
 	
 }
