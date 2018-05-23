@@ -15,12 +15,13 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
-
+import { HttpClientModule } from "@angular/common/http";
 import { routing } from './app.routing';
+import { BarcodeComponent } from './barcode/barcode.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, routing ],
-  declarations: [ AppComponent, HelloComponent, AppLayoutComponent, SiteLayoutComponent, AppHeaderComponent, SiteHeaderComponent, SiteFooterComponent, LoginComponent, DashboardComponent, HomeComponent, AboutComponent, RegisterComponent, ProfileComponent ],
+  imports:      [ BrowserModule, FormsModule, routing, HttpClientModule ],
+  declarations: [ AppComponent, HelloComponent, AppLayoutComponent, SiteLayoutComponent, AppHeaderComponent, SiteHeaderComponent, SiteFooterComponent, LoginComponent, DashboardComponent, HomeComponent, AboutComponent, RegisterComponent, ProfileComponent, BarcodeComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

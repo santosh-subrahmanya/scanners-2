@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +10,9 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent implements OnInit {
 
   company : any;
+  barcodes : any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
      //alert('In ng init');
@@ -18,7 +20,14 @@ export class HomeComponent implements OnInit {
       data =>  {
         //alert(data);
          this.company = data;
+         //alert(this.company.imageUrl);
     });
+  }
+
+  showAllBarcodes(company) {
+    alert(company);
+    //this.router.navigateByUrl(['/barcode', {"company":company}]);
+    this.router.navigateByUrl('/barcode;company=Walmart');
   }
 
 }

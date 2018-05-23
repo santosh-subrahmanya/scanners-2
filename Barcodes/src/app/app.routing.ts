@@ -1,6 +1,5 @@
 import { Routes, RouterModule } from '@angular/router';
-
-
+import { ModuleWithProviders } from '@angular/core/src/metadata/ng_module';
 
 import { SiteLayoutComponent } from './_layout/site-layout/site-layout.component';
 import { AppLayoutComponent } from './_layout/app-layout/app-layout.component';
@@ -12,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
+import { BarcodeComponent } from './barcode/barcode.component';
 
 
 const appRoutes: Routes = [
@@ -23,7 +23,8 @@ const appRoutes: Routes = [
         children: [
           { path: '', component: HomeComponent, pathMatch: 'full'},
           { path: 'about', component: AboutComponent },
-          { path: 'test/:id', component: AboutComponent }
+          { path: 'test/:id', component: AboutComponent },
+          { path: 'barcode/:company', component: BarcodeComponent }
         ]
     },
     
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
         component: AppLayoutComponent, 
         children: [
           { path: 'dashboard', component: DashboardComponent },
-          { path: 'profile', component: ProfileComponent }
+          { path: 'profile', component: ProfileComponent },
+          { path: 'barcode/:company', component: BarcodeComponent }
         ]
     },
 
@@ -44,6 +46,6 @@ const appRoutes: Routes = [
     { path: '**', redirectTo: '' }
 ];
 
-export const routing = RouterModule.forRoot(appRoutes);
+export const routing = RouterModule.forRoot(appRoutes, {useHash : true, enableTracing: true });
 
 

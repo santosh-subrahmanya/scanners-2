@@ -13,7 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @EnableAutoConfiguration
 @SpringBootApplication
-@ComponentScan("com.products.barcodes.scanners")
+@ComponentScan(basePackages = {"com.products.barcodes.scanners"})
 public class ScannersApplication {
 	
 	@Bean

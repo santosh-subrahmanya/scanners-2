@@ -462,6 +462,7 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__profile_profile_component__ = __webpack_require__("../../../../../src/app/profile/profile.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__barcode_barcode_component__ = __webpack_require__("../../../../../src/app/barcode/barcode.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -492,8 +493,8 @@ var AppModule = /** @class */ (function () {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_17__app_routing__["a" /* routing */], __WEBPACK_IMPORTED_MODULE_16__angular_common_http__["b" /* HttpClientModule */], __WEBPACK_IMPORTED_MODULE_16__angular_common_http__["a" /* HttpClient */]],
-            declarations: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_4__hello_component__["a" /* HelloComponent */], __WEBPACK_IMPORTED_MODULE_5__layout_app_layout_app_layout_component__["a" /* AppLayoutComponent */], __WEBPACK_IMPORTED_MODULE_6__layout_site_layout_site_layout_component__["a" /* SiteLayoutComponent */], __WEBPACK_IMPORTED_MODULE_7__layout_app_header_app_header_component__["a" /* AppHeaderComponent */], __WEBPACK_IMPORTED_MODULE_8__layout_site_header_site_header_component__["a" /* SiteHeaderComponent */], __WEBPACK_IMPORTED_MODULE_9__layout_site_footer_site_footer_component__["a" /* SiteFooterComponent */], __WEBPACK_IMPORTED_MODULE_10__login_login_component__["a" /* LoginComponent */], __WEBPACK_IMPORTED_MODULE_11__dashboard_dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_12__home_home_component__["a" /* HomeComponent */], __WEBPACK_IMPORTED_MODULE_13__about_about_component__["a" /* AboutComponent */], __WEBPACK_IMPORTED_MODULE_14__register_register_component__["a" /* RegisterComponent */], __WEBPACK_IMPORTED_MODULE_15__profile_profile_component__["a" /* ProfileComponent */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_17__app_routing__["a" /* routing */], __WEBPACK_IMPORTED_MODULE_16__angular_common_http__["b" /* HttpClientModule */]],
+            declarations: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_4__hello_component__["a" /* HelloComponent */], __WEBPACK_IMPORTED_MODULE_5__layout_app_layout_app_layout_component__["a" /* AppLayoutComponent */], __WEBPACK_IMPORTED_MODULE_6__layout_site_layout_site_layout_component__["a" /* SiteLayoutComponent */], __WEBPACK_IMPORTED_MODULE_7__layout_app_header_app_header_component__["a" /* AppHeaderComponent */], __WEBPACK_IMPORTED_MODULE_8__layout_site_header_site_header_component__["a" /* SiteHeaderComponent */], __WEBPACK_IMPORTED_MODULE_9__layout_site_footer_site_footer_component__["a" /* SiteFooterComponent */], __WEBPACK_IMPORTED_MODULE_10__login_login_component__["a" /* LoginComponent */], __WEBPACK_IMPORTED_MODULE_11__dashboard_dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_12__home_home_component__["a" /* HomeComponent */], __WEBPACK_IMPORTED_MODULE_13__about_about_component__["a" /* AboutComponent */], __WEBPACK_IMPORTED_MODULE_14__register_register_component__["a" /* RegisterComponent */], __WEBPACK_IMPORTED_MODULE_15__profile_profile_component__["a" /* ProfileComponent */], __WEBPACK_IMPORTED_MODULE_18__barcode_barcode_component__["a" /* BarcodeComponent */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -518,6 +519,8 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__register_register_component__ = __webpack_require__("../../../../../src/app/register/register.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__ = __webpack_require__("../../../../../src/app/profile/profile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__ = __webpack_require__("../../../../../src/app/barcode/barcode.component.ts");
+
 
 
 
@@ -535,7 +538,8 @@ var appRoutes = [
         children: [
             { path: '', component: __WEBPACK_IMPORTED_MODULE_3__home_home_component__["a" /* HomeComponent */], pathMatch: 'full' },
             { path: 'about', component: __WEBPACK_IMPORTED_MODULE_4__about_about_component__["a" /* AboutComponent */] },
-            { path: 'test/:id', component: __WEBPACK_IMPORTED_MODULE_4__about_about_component__["a" /* AboutComponent */] }
+            { path: 'test/:id', component: __WEBPACK_IMPORTED_MODULE_4__about_about_component__["a" /* AboutComponent */] },
+            { path: 'barcode/:company', component: __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__["a" /* BarcodeComponent */] }
         ]
     },
     // App routes goes here here
@@ -544,7 +548,8 @@ var appRoutes = [
         component: __WEBPACK_IMPORTED_MODULE_2__layout_app_layout_app_layout_component__["a" /* AppLayoutComponent */],
         children: [
             { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_7__dashboard_dashboard_component__["a" /* DashboardComponent */] },
-            { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__["a" /* ProfileComponent */] }
+            { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__["a" /* ProfileComponent */] },
+            { path: 'barcode/:company', component: __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__["a" /* BarcodeComponent */] }
         ]
     },
     //no layout routes
@@ -553,7 +558,84 @@ var appRoutes = [
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];
-var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(appRoutes);
+var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule */].forRoot(appRoutes, { useHash: true, enableTracing: true });
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/barcode/barcode.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/barcode/barcode.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  barcode works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/barcode/barcode.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BarcodeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var BarcodeComponent = /** @class */ (function () {
+    function BarcodeComponent(http, route) {
+        this.http = http;
+        this.route = route;
+    }
+    BarcodeComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        alert('In ng init method...');
+        this.route.params.subscribe(function (params) {
+            return _this.company = params['company'];
+        });
+        this.http.get('/fetchBarCodes' + this.company).subscribe(function (data) {
+            //alert(data);
+            _this.barcodes = data;
+            alert(_this.barcodes);
+        });
+    };
+    BarcodeComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-barcode',
+            template: __webpack_require__("../../../../../src/app/barcode/barcode.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/barcode/barcode.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
+    ], BarcodeComponent);
+    return BarcodeComponent;
+}());
+
 
 
 /***/ }),
@@ -677,7 +759,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "    <!-- Main jumbotron for a primary marketing message or call to action -->\n    <div class=\"jumbotron\">\n      <div class=\"container\">\n        <h1 class=\"display-3\">Your Favorite Barcodes Here....</h1>\n        <p>Help yourselves to a host of barcodes that you can start scanning across all your favorite shopping destinations</p>\n        <p><a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more &raquo;</a></p>\n      </div>\n    </div>\n\n    <div class=\"container\">\n      <!-- Example row of columns -->\n      <!-- <div class=\"row\">\n        <div class=\"col-md-4\">\n          <h2>Most Popular</h2>\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n        </div>\n        <div class=\"col-md-4\">\n          <h2>Most Popular</h2>\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n       </div>\n        <div class=\"col-md-4\">\n          <h2>Most Popular</h2>\n          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n        </div>\n      </div> -->\n\n      <div *ngFor=\"let comp of company\">\n        <div class=\"col-md-4\">\n          <h2>HP</h2>\n          <p>{{comp.description}}</p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View all Barcodes &raquo;</a></p>\n        </div>\n      </div>\n    <!-- </div> -->\n      \n\n\n\n      <hr>\n\n      \n    </div> <!-- /container -->\n    "
+module.exports = "    <!-- Main jumbotron for a primary marketing message or call to action -->\n    <div class=\"jumbotron\">\n      <div class=\"container\">\n        <h1 class=\"display-3\">Your Favorite Barcodes Here....</h1>\n        <p>Help yourselves to a host of barcodes that you can start scanning across all your favorite shopping destinations</p>\n        <p><a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more &raquo;</a></p>\n      </div>\n    </div>\n\n    <div class=\"container\">\n      <!-- Example row of columns -->\n      <div class=\"row\">\n        <div class=\"col-md-4\" *ngFor=\"let comp of company\">\n            <h2>{{comp.name}}</h2>\n            <p>{{comp.description}}</p>\n            <!-- <p>{{comp.imageUrl}}</p> -->\n            <img src = \"{{comp.imageUrl}}\" width=\"200\" height=\"200\">\n          <p><a routerLinkActive=\"active\" (click)=\"showAllBarcodes(comp.name)\" class=\"btn btn-secondary\" href=\"#\" role=\"button\">View all barcodes &raquo;</a></p>\n        </div>\n        <!-- <div class=\"col-md-4\">\n          <h2>Most Popular</h2>\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n       </div>\n        <div class=\"col-md-4\">\n          <h2>Most Popular</h2>\n          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n        </div> -->\n      </div>\n\n      <!-- <div class=\"container\" *ngFor=\"let comp of company\">\n          <div class=\"row\">\n            <div class=\"col-md-4\" class=\"row\"> \n              <h2>{{comp.name}}</h2>\n              <p>{{comp.description}}</p>\n               <p>{{comp.imageUrl}}</p> \n              <img src = \"{{comp.imageUrl}}\" width=\"200\" height=\"200\">\n              <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View all Barcodes &raquo;</a></p>\n            </div>\n          </div>\n      </div> -->\n    <!-- </div> -->\n      \n\n\n\n      <hr>\n\n      \n    </div> <!-- /container -->\n    "
 
 /***/ }),
 
@@ -688,6 +770,7 @@ module.exports = "    <!-- Main jumbotron for a primary marketing message or cal
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -699,9 +782,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent(http) {
+    function HomeComponent(http, router) {
         this.http = http;
+        this.router = router;
     }
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -709,7 +794,13 @@ var HomeComponent = /** @class */ (function () {
         this.http.get('/company').subscribe(function (data) {
             //alert(data);
             _this.company = data;
+            //alert(this.company.imageUrl);
         });
+    };
+    HomeComponent.prototype.showAllBarcodes = function (company) {
+        alert(company);
+        //this.router.navigateByUrl(['/barcode', {"company":company}]);
+        this.router.navigateByUrl('/barcode;company=Walmart');
     };
     HomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -717,7 +808,7 @@ var HomeComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/home/home.component.html"),
             styles: [__webpack_require__("../../../../../src/app/home/home.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]])
     ], HomeComponent);
     return HomeComponent;
 }());
