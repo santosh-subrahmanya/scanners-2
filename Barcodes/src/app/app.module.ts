@@ -22,6 +22,6 @@ import { BarcodeComponent } from './barcode/barcode.component';
 @NgModule({
   imports:      [ BrowserModule, FormsModule, routing, HttpClientModule ],
   declarations: [ AppComponent, HelloComponent, AppLayoutComponent, SiteLayoutComponent, AppHeaderComponent, SiteHeaderComponent, SiteFooterComponent, LoginComponent, DashboardComponent, HomeComponent, AboutComponent, RegisterComponent, ProfileComponent, BarcodeComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent, BarcodeComponent ]
 })
 export class AppModule { }

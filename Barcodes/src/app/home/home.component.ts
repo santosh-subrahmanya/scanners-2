@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   company : any;
   barcodes : any;
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
      //alert('In ng init');
@@ -27,7 +27,14 @@ export class HomeComponent implements OnInit {
   showAllBarcodes(company) {
     alert(company);
     //this.router.navigateByUrl(['/barcode', {"company":company}]);
-    this.router.navigateByUrl('/barcode;company=Walmart');
+    //this.router.navigateByUrl('/barcode;company=Walmart');
+    this.router.navigate(['barcode', {"company":company}], { relativeTo: this.route }).then(nav => {
+      console.log(nav); // true if navigation is successful
+      alert('success');
+    }, err => {
+      console.log(err) // when there's an error
+      alert('failure');
+    });
   }
 
 }

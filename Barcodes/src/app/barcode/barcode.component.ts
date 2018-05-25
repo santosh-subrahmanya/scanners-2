@@ -20,7 +20,7 @@ export class BarcodeComponent implements OnInit {
       this.company = params['company']
     )
   
-    this.http.get('/fetchBarCodes'+this.company).subscribe(
+    this.http.get('fetchBarCodes?company='+this.company).subscribe(
       data =>  {
         //alert(data);
          this.barcodes = data;

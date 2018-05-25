@@ -15,7 +15,7 @@
             <p>{{comp.description}}</p>
             <!-- <p>{{comp.imageUrl}}</p> -->
             <img src = "{{comp.imageUrl}}" width="200" height="200">
-          <p><a routerLinkActive="active" (click)="showAllBarcodes(comp.name)" class="btn btn-secondary" href="#" role="button">View all barcodes &raquo;</a></p>
+          <p><a (click)="showAllBarcodes(comp.name)" class="btn btn-secondary"  role="button">View all barcodes &raquo;</a></p>
         </div>
         <!-- <div class="col-md-4">
           <h2>Most Popular</h2>

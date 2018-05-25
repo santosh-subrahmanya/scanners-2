@@ -18,13 +18,13 @@ const appRoutes: Routes = [
     
     //Site routes goes here 
     { 
-        path: '', 
-        component: SiteLayoutComponent,
+        path: '', component: SiteLayoutComponent,
         children: [
           { path: '', component: HomeComponent, pathMatch: 'full'},
           { path: 'about', component: AboutComponent },
           { path: 'test/:id', component: AboutComponent },
-          { path: 'barcode/:company', component: BarcodeComponent }
+          { path: 'barcode', component: BarcodeComponent,  pathMatch: 'full' },
+          { path: 'barcode/:company', component: BarcodeComponent,  pathMatch: 'full' }
         ]
     },
     
@@ -35,6 +35,7 @@ const appRoutes: Routes = [
         children: [
           { path: 'dashboard', component: DashboardComponent },
           { path: 'profile', component: ProfileComponent },
+          { path: 'barcode', component: BarcodeComponent,  pathMatch: 'full' },
           { path: 'barcode/:company', component: BarcodeComponent }
         ]
     },
@@ -42,6 +43,8 @@ const appRoutes: Routes = [
     //no layout routes
     { path: 'login', component: LoginComponent},
     { path: 'register', component: RegisterComponent },
+    { path: 'barcode/:company', component: BarcodeComponent },
+    
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];
