@@ -25,15 +25,15 @@ export class HomeComponent implements OnInit {
   }
 
   showAllBarcodes(company) {
-    alert(company);
+    //alert(company);
     //this.router.navigateByUrl(['/barcode', {"company":company}]);
     //this.router.navigateByUrl('/barcode;company=Walmart');
     this.router.navigate(['barcode', {"company":company}], { relativeTo: this.route }).then(nav => {
       console.log(nav); // true if navigation is successful
-      alert('success');
+      console.log('success');
     }, err => {
       console.log(err) // when there's an error
-      alert('failure');
+      console.log('failure');
     });
   }
 

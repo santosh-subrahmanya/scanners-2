@@ -14,8 +14,6 @@ export class BarcodeComponent implements OnInit {
   barcodes : any;
 
   ngOnInit() {
-
-    alert('In ng init method...');
     this.route.params.subscribe( params =>
       this.company = params['company']
     )
@@ -24,7 +22,7 @@ export class BarcodeComponent implements OnInit {
       data =>  {
         //alert(data);
          this.barcodes = data;
-         alert(this.barcodes);
+         console.log(this.barcodes);
     });
   }
 

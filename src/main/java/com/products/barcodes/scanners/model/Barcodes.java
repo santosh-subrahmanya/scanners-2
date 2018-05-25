@@ -10,6 +10,7 @@ public class Barcodes {
 	private String productName;
 	private String productDescription;
 	private String productImageUrl;
+	private String company;
 	
 	public String getId() {
 		return id;
@@ -50,4 +51,13 @@ public class Barcodes {
 	public void setProductImageUrl(String productImageUrl) {
 		this.productImageUrl = productImageUrl;
 	}
+
+	public String getCompany() {
+		return company;
+	}
+
+	public void setCompany(String company) {
+		this.company = company;
+	}
+	
 }
