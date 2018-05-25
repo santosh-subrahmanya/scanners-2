@@ -37,4 +37,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  howItWorks() {
+    this.router.navigate(['about']);
+  }
+
 }
