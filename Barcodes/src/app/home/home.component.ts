@@ -38,6 +38,7 @@ export class HomeComponent implements OnInit {
   }
 
   howItWorks() {
+    //alert('In how it works');
     this.router.navigate(['about']);
   }
 
