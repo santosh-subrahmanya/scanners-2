@@ -11,14 +11,16 @@ public class Product {
 	private String productName;
 	private String productDescription;
 	private String productImageURL;
+	private String barcodeImageUrl;
 	
 	
-	public Product(String productId, String productToProductCategory, String productName, String productDescription, String productImageURL){
+	public Product(String productId, String productToProductCategory, String productName, String productDescription, String productImageURL, String barcodeImageUrl){
 		this.productId = productId;
 		this.productToProductCategory = productToProductCategory;
 		this.productName = productName;
 		this.productDescription = productDescription;
 		this.productImageURL = productImageURL;
+		this.barcodeImageUrl = barcodeImageUrl;
 	}
 	
 	public String getProductId() {
@@ -61,4 +63,17 @@ public class Product {
 	public void setProductImageURL(String productImageURL) {
 		this.productImageURL = productImageURL;
 	}
+
+	public String getBarcodeImageUrl() {
+		return barcodeImageUrl;
+	}
+
+	public void setBarcodeImageUrl(String barcodeImageUrl) {
+		this.barcodeImageUrl = barcodeImageUrl;
+	}
+
+	public void setProductToProductCategory(String productToProductCategory) {
+		this.productToProductCategory = productToProductCategory;
+	}
+	
 }

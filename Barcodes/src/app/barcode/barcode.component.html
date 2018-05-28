@@ -13,7 +13,10 @@
           <div class="col-md-4" *ngFor="let barcode of barcodes">
               <h2>{{barcode?.productName}}</h2>
               <p>{{barcode?.productDescription}}</p>
-              <img src = "{{barcode.productImageUrl}}" width="300" height="300">
+              <!-- <img (click)="fetchBarcode()" src = "{{barcode?.productImageUrl}}" width="300" height="300"> -->
+              <div *ngFor="let image of _albums; let i=index">
+                  <img [src]="image.thumb" (click)="open(i)"/>
+              </div>
           </div>
       </div>
       <hr>
