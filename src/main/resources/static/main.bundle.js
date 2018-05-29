@@ -453,22 +453,25 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hello_component__ = __webpack_require__("../../../../../src/app/hello.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__layout_app_layout_app_layout_component__ = __webpack_require__("../../../../../src/app/_layout/app-layout/app-layout.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__layout_site_layout_site_layout_component__ = __webpack_require__("../../../../../src/app/_layout/site-layout/site-layout.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__layout_app_header_app_header_component__ = __webpack_require__("../../../../../src/app/_layout/app-header/app-header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__layout_site_header_site_header_component__ = __webpack_require__("../../../../../src/app/_layout/site-header/site-header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__layout_site_footer_site_footer_component__ = __webpack_require__("../../../../../src/app/_layout/site-footer/site-footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__about_about_component__ = __webpack_require__("../../../../../src/app/about/about.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__register_register_component__ = __webpack_require__("../../../../../src/app/register/register.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__profile_profile_component__ = __webpack_require__("../../../../../src/app/profile/profile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__barcode_barcode_component__ = __webpack_require__("../../../../../src/app/barcode/barcode.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_cdk_table__ = __webpack_require__("../../../cdk/esm5/table.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hello_component__ = __webpack_require__("../../../../../src/app/hello.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__layout_app_layout_app_layout_component__ = __webpack_require__("../../../../../src/app/_layout/app-layout/app-layout.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__layout_site_layout_site_layout_component__ = __webpack_require__("../../../../../src/app/_layout/site-layout/site-layout.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__layout_app_header_app_header_component__ = __webpack_require__("../../../../../src/app/_layout/app-header/app-header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__layout_site_header_site_header_component__ = __webpack_require__("../../../../../src/app/_layout/site-header/site-header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__layout_site_footer_site_footer_component__ = __webpack_require__("../../../../../src/app/_layout/site-footer/site-footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__about_about_component__ = __webpack_require__("../../../../../src/app/about/about.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__register_register_component__ = __webpack_require__("../../../../../src/app/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__profile_profile_component__ = __webpack_require__("../../../../../src/app/profile/profile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__barcode_barcode_component__ = __webpack_require__("../../../../../src/app/barcode/barcode.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -494,14 +497,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_17__app_routing__["a" /* routing */], __WEBPACK_IMPORTED_MODULE_16__angular_common_http__["b" /* HttpClientModule */]],
-            declarations: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_4__hello_component__["a" /* HelloComponent */], __WEBPACK_IMPORTED_MODULE_5__layout_app_layout_app_layout_component__["a" /* AppLayoutComponent */], __WEBPACK_IMPORTED_MODULE_6__layout_site_layout_site_layout_component__["a" /* SiteLayoutComponent */], __WEBPACK_IMPORTED_MODULE_7__layout_app_header_app_header_component__["a" /* AppHeaderComponent */], __WEBPACK_IMPORTED_MODULE_8__layout_site_header_site_header_component__["a" /* SiteHeaderComponent */], __WEBPACK_IMPORTED_MODULE_9__layout_site_footer_site_footer_component__["a" /* SiteFooterComponent */], __WEBPACK_IMPORTED_MODULE_10__login_login_component__["a" /* LoginComponent */], __WEBPACK_IMPORTED_MODULE_11__dashboard_dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_12__home_home_component__["a" /* HomeComponent */], __WEBPACK_IMPORTED_MODULE_13__about_about_component__["a" /* AboutComponent */], __WEBPACK_IMPORTED_MODULE_14__register_register_component__["a" /* RegisterComponent */], __WEBPACK_IMPORTED_MODULE_15__profile_profile_component__["a" /* ProfileComponent */], __WEBPACK_IMPORTED_MODULE_18__barcode_barcode_component__["a" /* BarcodeComponent */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_18__barcode_barcode_component__["a" /* BarcodeComponent */]]
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
+            exports: [__WEBPACK_IMPORTED_MODULE_3__angular_cdk_table__["m" /* CdkTableModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["a" /* MatAutocompleteModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["b" /* MatButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["c" /* MatButtonToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["d" /* MatCardModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["e" /* MatCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["f" /* MatChipsModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["B" /* MatStepperModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["g" /* MatDatepickerModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["h" /* MatDialogModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["i" /* MatDividerModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["j" /* MatExpansionModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["k" /* MatGridListModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["l" /* MatIconModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["m" /* MatInputModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["n" /* MatListModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["o" /* MatMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["p" /* MatNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["q" /* MatPaginatorModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["r" /* MatProgressBarModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["s" /* MatProgressSpinnerModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["t" /* MatRadioModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["u" /* MatRippleModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["v" /* MatSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["w" /* MatSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["y" /* MatSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["x" /* MatSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["z" /* MatSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["A" /* MatSortModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["C" /* MatTableModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["D" /* MatTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["E" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_material__["F" /* MatTooltipModule */],
+            ],
+            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_18__app_routing__["a" /* routing */], __WEBPACK_IMPORTED_MODULE_17__angular_common_http__["b" /* HttpClientModule */], __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */], __WEBPACK_IMPORTED_MODULE_21__angular_material__["v" /* MatSelectModule */]],
+            declarations: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_5__hello_component__["a" /* HelloComponent */], __WEBPACK_IMPORTED_MODULE_6__layout_app_layout_app_layout_component__["a" /* AppLayoutComponent */], __WEBPACK_IMPORTED_MODULE_7__layout_site_layout_site_layout_component__["a" /* SiteLayoutComponent */], __WEBPACK_IMPORTED_MODULE_8__layout_app_header_app_header_component__["a" /* AppHeaderComponent */], __WEBPACK_IMPORTED_MODULE_9__layout_site_header_site_header_component__["a" /* SiteHeaderComponent */], __WEBPACK_IMPORTED_MODULE_10__layout_site_footer_site_footer_component__["a" /* SiteFooterComponent */], __WEBPACK_IMPORTED_MODULE_11__login_login_component__["a" /* LoginComponent */], __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_13__home_home_component__["a" /* HomeComponent */], __WEBPACK_IMPORTED_MODULE_14__about_about_component__["a" /* AboutComponent */], __WEBPACK_IMPORTED_MODULE_15__register_register_component__["a" /* RegisterComponent */], __WEBPACK_IMPORTED_MODULE_16__profile_profile_component__["a" /* ProfileComponent */], __WEBPACK_IMPORTED_MODULE_19__barcode_barcode_component__["a" /* BarcodeComponent */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_19__barcode_barcode_component__["a" /* BarcodeComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -592,7 +632,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/barcode/barcode.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "    <!-- Main jumbotron for a primary marketing message or call to action -->\n    <div class=\"jumbotron\">\n      <div class=\"container\"> \n        <h1 class=\"display-3\">Barcodes for {{barcodes[0]?.company}}</h1>\n        <p>Help yourselves to a host of barcodes for {{barcodes[0]?.company}} that you can just scan from the comfort of your home and earn shopkick points. It's that easy !!! </p>\n        <p><a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more &raquo;</a></p>\n      </div>\n    </div>\n\n    <div class=\"container\">\n      <!-- Example row of columns -->\n      <div class=\"row\">\n          <div class=\"col-md-4\" *ngFor=\"let barcode of barcodes\">\n              <h2>{{barcode?.productName}}</h2>\n              <p>{{barcode?.productDescription}}</p>\n              <img (click)=\"fetchBarcode()\" src = \"{{barcode?.productImageUrl}}\" width=\"300\" height=\"300\">\n          </div>\n      </div>\n      <hr>\n    </div> <!-- /container -->\n    "
+module.exports = "<!-- Main jumbotron for a primary marketing message or call to action -->\n<div class=\"jumbotron\">\n    <div class=\"container\">\n        <h1 class=\"display-3\">Barcodes for {{barcodes[0]?.company}}</h1>\n        <p>Help yourselves to a host of barcodes for {{barcodes[0]?.company}} that you can just scan from the comfort of your\n            home and earn shopkick points. It's that easy !!! </p>\n        <p>\n            <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more &raquo;</a>\n        </p>\n    </div>\n</div>\n\n<div class=\"container\">\n    <!-- Example row of columns -->\n    <div class=\"row\">\n\n            <mat-form-field>\n                    <mat-select placeholder=\"Favorite food\">\n                      <mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">\n                        {{ food.viewValue }}\n                      </mat-option>\n                    </mat-select>\n                  </mat-form-field>\n        <div class=\"col-md-4\" *ngFor=\"let barcode of barcodes\">\n            <h2>{{barcode?.productName}}</h2>\n            <p>{{barcode?.productDescription}}</p>\n            <img (mouseover)=\"onMouseOver()\" (click)=\"fetchBarcode()\" src=\"{{barcode?.productImageUrl}}\" width=\"300\" height=\"300\">\n            <!-- <div *ngFor=\"let image of _albums; let i=index\">\n                  <img [src]=\"image.thumb\" (click)=\"open(i)\"/>\n              </div> -->\n        </div>\n    </div>\n    <hr>\n</div>\n<!-- /container -->"
 
 /***/ }),
 
@@ -620,9 +660,16 @@ var BarcodeComponent = /** @class */ (function () {
     function BarcodeComponent(http, route) {
         this.http = http;
         this.route = route;
+        this.category = [];
+        this.foods = [
+            { value: 'steak-0', viewValue: 'Steak' },
+            { value: 'pizza-1', viewValue: 'Pizza' },
+            { value: 'tacos-2', viewValue: 'Tacos' }
+        ];
     }
     BarcodeComponent.prototype.ngOnInit = function () {
         var _this = this;
+        var category = new Set();
         this.route.params.subscribe(function (params) {
             return _this.company = params['company'];
         });
@@ -630,6 +677,11 @@ var BarcodeComponent = /** @class */ (function () {
             //alert(data);
             _this.barcodes = data;
             console.log(_this.barcodes);
+            _this.barcodes.forEach(function (element) {
+                console.log(element.productCategory);
+                category.add(element.productCategory);
+            });
+            //alert(category.values); 
         });
     };
     BarcodeComponent = __decorate([
@@ -728,7 +780,7 @@ var HelloComponent = /** @class */ (function () {
     function HelloComponent() {
     }
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
         __metadata("design:type", String)
     ], HelloComponent.prototype, "name", void 0);
     HelloComponent = __decorate([

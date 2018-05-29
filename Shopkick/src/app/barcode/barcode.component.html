@@ -1,24 +1,35 @@
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container"> 
-        <h1 class="display-3">Barcodes for {{barcodes[0]?.company}}</h1>
-        <p>Help yourselves to a host of barcodes for {{barcodes[0]?.company}} that you can just scan from the comfort of your home and earn shopkick points. It's that easy !!! </p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-      </div>
-    </div>
-
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
     <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-          <div class="col-md-4" *ngFor="let barcode of barcodes">
-              <h2>{{barcode?.productName}}</h2>
-              <p>{{barcode?.productDescription}}</p>
-              <!-- <img (click)="fetchBarcode()" src = "{{barcode?.productImageUrl}}" width="300" height="300"> -->
-              <div *ngFor="let image of _albums; let i=index">
+        <h1 class="display-3">Barcodes for {{barcodes[0]?.company}}</h1>
+        <p>Help yourselves to a host of barcodes for {{barcodes[0]?.company}} that you can just scan from the comfort of your
+            home and earn shopkick points. It's that easy !!! </p>
+        <p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a>
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+
+            <mat-form-field>
+                    <mat-select placeholder="Favorite food">
+                      <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{ food.viewValue }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+        <div class="col-md-4" *ngFor="let barcode of barcodes">
+            <h2>{{barcode?.productName}}</h2>
+            <p>{{barcode?.productDescription}}</p>
+            <img (mouseover)="onMouseOver()" (click)="fetchBarcode()" src="{{barcode?.productImageUrl}}" width="300" height="300">
+            <!-- <div *ngFor="let image of _albums; let i=index">
                   <img [src]="image.thumb" (click)="open(i)"/>
-              </div>
-          </div>
-      </div>
-      <hr>
-    </div> <!-- /container -->
-    
+              </div> -->
+        </div>
+    </div>
+    <hr>
+</div>
+<!-- /container -->

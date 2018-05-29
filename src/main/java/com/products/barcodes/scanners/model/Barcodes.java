@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Barcodes {
 	
 	private String id;
-	private String productProductCategery;
+	private String productCategory;
 	private String productName;
 	private String productDescription;
 	private String productImageUrl;
@@ -21,12 +21,12 @@ public class Barcodes {
 		this.id = id;
 	}
 	
-	public String getProductProductCategery() {
-		return productProductCategery;
+	public String getProductCategory() {
+		return productCategory;
 	}
 	
-	public void setProductProductCategery(String productProductCategery) {
-		this.productProductCategery = productProductCategery;
+	public void seProductCategery(String productCategory) {
+		this.productCategory = productCategory;
 	}
 	
 	public String getProductName() {
