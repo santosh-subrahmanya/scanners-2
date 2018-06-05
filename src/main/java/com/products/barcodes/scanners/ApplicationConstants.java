@@ -8,5 +8,7 @@ package com.products.barcodes.scanners;
 public class ApplicationConstants {
 	
 	public static final String COMPANY = "company";
+	public static final String CATEGORY = "productCategory";
+	public static final String ALL = "All";
 
 }

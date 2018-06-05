@@ -8,6 +8,6 @@ import com.products.barcodes.scanners.model.Barcode;
 
 public interface BarcodesService {
 	
-	List<Barcode> getAllBarcodes(String companyName);
+	List<Barcode> getAllBarcodes(String companyName, String category);
 
 }

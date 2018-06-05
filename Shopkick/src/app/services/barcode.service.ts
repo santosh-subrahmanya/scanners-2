@@ -13,9 +13,9 @@ export class BarcodeService {
 
   constructor(private http: Http) { }
 
-  getBarcodes(company) : Observable<Barcode[]> {
+  getBarcodes(company, category) : Observable<Barcode[]> {
 
-    let apiURL = '/fetchBarCodes?company='+company;
+    let apiURL = '/fetchBarCodes?company='+company+'&category='+category;
 
     return this.http
              .get(apiURL)

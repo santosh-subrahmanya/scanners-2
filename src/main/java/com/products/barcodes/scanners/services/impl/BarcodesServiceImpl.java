@@ -24,9 +24,12 @@ public class BarcodesServiceImpl implements BarcodesService {
 	MongoTemplate mongoTemplate;
 
 	@Override
-	public List<Barcode> getAllBarcodes(String companyName) {
+	public List<Barcode> getAllBarcodes(String companyName, String category) {
 		Query query = new Query();
 		query.addCriteria(Criteria.where(ApplicationConstants.COMPANY).is(companyName));
+		if(!category.equals(ApplicationConstants.ALL)) {
+			query.addCriteria(Criteria.where(ApplicationConstants.CATEGORY).is(category));
+		}
 		return (List<Barcode>) mongoTemplate.find(query, Barcode.class);
 	}
 	

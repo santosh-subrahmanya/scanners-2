@@ -33,8 +33,8 @@ public class BarcodesController {
 	 */
 	@CrossOrigin(origins = "http://localhost:8080")
 	@RequestMapping(method=RequestMethod.GET, value="/fetchBarCodes", produces = MediaType.APPLICATION_JSON_VALUE)
-	public Iterable<Barcode> fetchBarCodes(String company) {
-		return barcodesService.getAllBarcodes(company);
+	public Iterable<Barcode> fetchBarCodes(String company, String category) {
+		return barcodesService.getAllBarcodes(company, category);
 	}
 	
 

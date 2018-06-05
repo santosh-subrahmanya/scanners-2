@@ -26,51 +26,28 @@ export class BarcodeComponent implements OnInit {
   company: string;
   //barcodes: any;
   //barcodes = [];
-  selected = 'All';
+  //cat = 'All';
   category = [];
   categorySet = new Set();
+  filterByCategory: string = "All";
+
 
 
   private errorMessage: any = '';
 
-  getBarcodes() {
+  getBarcodes(cat) {
     this.categorySet.add('All');
 
     this.route.params.subscribe(params =>
       this.company = params['company']
     )
 
-    // this.http.get('fetchBarCodes?company='+this.company).subscribe(
-    //   data =>  {
-    //      alert(data);
-    //      this.barcodes = data;
-    //      console.log(this.barcodes);
-    //      this.barcodes.forEach(element => { 
-    //        console.log('Element is :'+element);
-    //        console.log('Category is :'+element.productCategory);
-    //        this.categorySet.add(element.productCategory);
-    //      });
-
-    //      this.category = Array.from(this.categorySet); 
-    //      console.log('Category is '+this.category);
-
-    // });
-
-    // this.barcodes = this.barcodeService.getBarcodes(this.company);
-
-
-    // this.barcodeService.getBarcodes(this.company).subscribe(data => {
-    //   this.loading = false;
-    //   this.barcodes = data 
-    // });
-
-    this.barcodeService.getBarcodes(this.company).subscribe(data => {
+    this.barcodeService.getBarcodes(this.company, cat).subscribe(data => {
       this.loading = false;
       this.barcodes = data;
       console.log('Barcodes data is :' + this.barcodes);
       this.barcodes.forEach(element => {
-        //console.log('index is :'+index);
-        //console.log(element[0].productCategory);
+
         this.categorySet.add(element.productCategory);
       });
       this.category = Array.from(this.categorySet);
@@ -81,12 +58,12 @@ export class BarcodeComponent implements OnInit {
 
   }
 
-  filterProducts(value) {
-    alert(value.value);
+  filterProducts(category) {
+    this.getBarcodes(category.value);
   }
 
   ngOnInit(): void {
-    this.getBarcodes();
+    this.getBarcodes('All');
   }
 
 
