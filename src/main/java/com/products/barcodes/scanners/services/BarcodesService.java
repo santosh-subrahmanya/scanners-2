@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.products.barcodes.scanners.model.Barcodes;
+import com.products.barcodes.scanners.model.Barcode;
 
 public interface BarcodesService {
 	
-	List<Barcodes> getAllBarcodes(String companyName);
+	List<Barcode> getAllBarcodes(String companyName);
 
 }

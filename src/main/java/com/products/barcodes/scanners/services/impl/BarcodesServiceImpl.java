@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 
 import com.products.barcodes.scanners.ApplicationConstants;
-import com.products.barcodes.scanners.model.Barcodes;
+import com.products.barcodes.scanners.model.Barcode;
 import com.products.barcodes.scanners.model.Company;
 import com.products.barcodes.scanners.repositories.BarcodesRepository;
 import com.products.barcodes.scanners.services.BarcodesService;
@@ -24,10 +24,10 @@ public class BarcodesServiceImpl implements BarcodesService {
 	MongoTemplate mongoTemplate;
 
 	@Override
-	public List<Barcodes> getAllBarcodes(String companyName) {
+	public List<Barcode> getAllBarcodes(String companyName) {
 		Query query = new Query();
 		query.addCriteria(Criteria.where(ApplicationConstants.COMPANY).is(companyName));
-		return (List<Barcodes>) mongoTemplate.find(query, Barcodes.class);
+		return (List<Barcode>) mongoTemplate.find(query, Barcode.class);
 	}
 	
 	

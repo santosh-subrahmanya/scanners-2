@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.products.barcodes.scanners.model.Barcodes;
+import com.products.barcodes.scanners.model.Barcode;
 import com.products.barcodes.scanners.repositories.BarcodesRepository;
 import com.products.barcodes.scanners.services.BarcodesService;
 
@@ -33,7 +33,7 @@ public class BarcodesController {
 	 */
 	@CrossOrigin(origins = "http://localhost:8080")
 	@RequestMapping(method=RequestMethod.GET, value="/fetchBarCodes", produces = MediaType.APPLICATION_JSON_VALUE)
-	public Iterable<Barcodes> fetchBarCodes(String company) {
+	public Iterable<Barcode> fetchBarCodes(String company) {
 		return barcodesService.getAllBarcodes(company);
 	}
 	

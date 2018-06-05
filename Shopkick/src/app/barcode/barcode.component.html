@@ -7,25 +7,6 @@
         <p>
             <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a>
         </p>
-
-        <!--            
-                <mat-form-field>
-                    <mat-select [(value)]="selected" placeholder="Select Category">
-                        
-                        <mat-option *ngFor="let category of categories" [value]="{{category}}">
-                            {{ category }}
-                        </mat-option>
-                    </mat-select>
-                </mat-form-field> -->
-
-        <!-- <mat-form-field>
-                        <mat-select [(ngModel)]="selected" placeholder="Select Category">
-                          <mat-option *ngFor="let category of categories" [value]="category">
-                              {{ category }}</mat-option>
-                        </mat-select>
-                      </mat-form-field> -->
-
-
     </div>
 </div>
 
@@ -33,27 +14,23 @@
     <mat-form-field>
         <mat-select [(ngModel)]="selected" name="cat" placeholder="Choose Category" style="min-width:200px;" (change)="filterProducts($event)">
 
-            <mat-option *ngFor="let cat of category" [value]="cat" >{{ cat }}</mat-option>
+            <mat-option *ngFor="let cat of category" [value]="cat">{{ cat }}</mat-option>
         </mat-select>
     </mat-form-field>
 </div>
 
 <div>
     <!-- Example row of columns -->
-
-
     <div class="row">
-
-
-        <div class="col-md-4" *ngFor="let barcode of barcodes">
-            <h2>{{barcode?.productName}}</h2>
-            <p>{{barcode?.productDescription}}</p>
-            <img src="{{barcode?.productImageUrl}}" width="300" height="300" />
-            <!-- <div *ngFor="let image of _albums; let i=index">
-                      <img [src]="image.thumb" (click)="open(i)"/>
-                  </div> -->
+        <div *ngFor='let key of JSObject.keys(barcodes)'>
+            <h2>{{barcodes[key].productName}}</h2>
+            <p>{{barcodes[key].productDescription}}</p>
+            <img src="{{barcodes[key].productImageUrl}}" width="300" height="300" />
         </div>
     </div>
+
+
+    
     <hr>
 </div>
 <!-- /container -->
