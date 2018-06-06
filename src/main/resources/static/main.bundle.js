@@ -612,7 +612,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "body { \n    font-family: Roboto, Arial, sans-serif;\n    margin: 0;\n  }\n  \n  .basic-container {\n    padding: 30px;\n  }\n  \n  .version-info {\n    font-size: 8pt;\n    float: right;\n  }", ""]);
+exports.push([module.i, "body { \n    font-family: Roboto, Arial, sans-serif;\n    margin: 0;\n    color:#449d44\n  }\n  \n  .basic-container {\n    padding: 30px;\n  }\n  \n  .version-info {\n    font-size: 8pt;\n    float: right;\n  }", ""]);
 
 // exports
 
@@ -625,7 +625,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/barcode/barcode.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Main jumbotron for a primary marketing message or call to action -->\n<div class=\"jumbotron\">\n    <div class=\"container\">\n        <h1 class=\"display-3\">Barcodes for {{barcodes[0]?.company}}</h1>\n        <p>Help yourselves to a host of barcodes for {{barcodes[0]?.company}} that you can just scan from the comfort of your\n            home and earn shopkick points. It's that easy !!! </p>\n        <p>\n            <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more &raquo;</a>\n        </p>\n    </div>\n</div>\n\n<div style=\"padding: 7px\">\n    <mat-form-field>\n        <mat-select [(ngModel)]=\"selected\" name=\"cat\" placeholder=\"Choose Category\" style=\"min-width:200px;\" (change)=\"filterProducts($event)\">\n\n            <mat-option *ngFor=\"let cat of category\" [value]=\"cat\">{{ cat }}</mat-option>\n        </mat-select>\n    </mat-form-field>\n</div>\n\n<div>\n    <!-- Example row of columns -->\n    <div class=\"row\">\n        <div *ngFor='let key of JSObject.keys(barcodes)    '>\n            <h2>{{barcodes[key].productName}}</h2>\n            <p>{{barcodes[key].productDescription}}</p>\n            <img src=\"{{barcodes[key].productImageUrl}}\" width=\"300\" height=\"300\" />\n        </div>\n    </div>\n\n\n    \n    <hr>\n</div>\n<!-- /container -->"
+module.exports = "<!-- Main jumbotron for a primary marketing message or call to action -->\n<div class=\"jumbotron\">\n    <div class=\"container\">\n        <h1 class=\"display-3\">Barcodes for {{barcodes[0]?.company}}</h1>\n        <p>Help yourselves to a host of barcodes for {{barcodes[0]?.company}} that you can just scan from the comfort of your\n            home and earn shopkick points. It's that easy !!! </p>\n        <p>\n            <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more &raquo;</a>\n        </p>\n    </div>\n</div>\n\n<div style=\"padding: 7px\">\n    <mat-form-field>\n        <mat-select [(ngModel)]=\"selected\" name=\"cat\" placeholder=\"Choose Category\"  (change)=\"filterProducts($event)\">\n\n            <mat-option *ngFor=\"let cat of category\" [value]=\"cat\">{{ cat }}</mat-option>\n        </mat-select>\n    </mat-form-field>\n</div>\n\n<div>\n    <!-- Example row of columns -->\n    <div class=\"row\">\n        <div *ngFor='let key of JSObject.keys(barcodes)'  style=\"width:350px; margin:0 auto;padding:10px\">\n            <h2>{{barcodes[key].productName}}</h2>\n            <p>{{barcodes[key].productDescription}}</p>\n            <img src=\"{{barcodes[key].productImageUrl}}\" width=\"300\" height=\"300\" />\n            <img src=\"{{barcodes[key].barcodeImageUrl}}\" width=\"300\" height=\"300\" />\n            <br/>\n        </div>\n    </div>\n\n\n    \n    <hr>\n</div>\n<!-- /container -->"
 
 /***/ }),
 
@@ -658,9 +658,6 @@ let BarcodeComponent = class BarcodeComponent {
         this.barcodeService = barcodeService;
         this.loading = false;
         this.JSObject = Object;
-        //barcodes: any;
-        //barcodes = [];
-        //cat = 'All';
         this.category = [];
         this.categorySet = new Set();
         this.filterByCategory = "All";
@@ -674,8 +671,6 @@ let BarcodeComponent = class BarcodeComponent {
             this.barcodes = data;
             console.log('Barcodes data is :' + this.barcodes);
             this.barcodes.forEach(element => {
-                //console.log('index is :'+index);
-                //console.log(element[0].productCategory);
                 this.categorySet.add(element.productCategory);
             });
             this.category = Array.from(this.categorySet);
@@ -684,8 +679,6 @@ let BarcodeComponent = class BarcodeComponent {
         });
     }
     filterProducts(category) {
-        alert(category);
-        //this.filterByCategory = category.value;
         this.getBarcodes(category.value);
     }
     ngOnInit() {

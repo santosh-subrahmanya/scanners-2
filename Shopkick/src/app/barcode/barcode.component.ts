@@ -24,14 +24,9 @@ export class BarcodeComponent implements OnInit {
   constructor(private http: HttpClient, private route: ActivatedRoute, private barcodeService: BarcodeService) { }
 
   company: string;
-  //barcodes: any;
-  //barcodes = [];
-  //cat = 'All';
   category = [];
   categorySet = new Set();
   filterByCategory: string = "All";
-
-
 
   private errorMessage: any = '';
 
@@ -65,7 +60,4 @@ export class BarcodeComponent implements OnInit {
   ngOnInit(): void {
     this.getBarcodes('All');
   }
-
-
-
 }
