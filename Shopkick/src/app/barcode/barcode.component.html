@@ -13,7 +13,6 @@
 <div style="padding: 7px">
     <mat-form-field>
         <mat-select [(ngModel)]="selected" name="cat" placeholder="Choose Category"  (change)="filterProducts($event)">
-
             <mat-option *ngFor="let cat of category" [value]="cat">{{ cat }}</mat-option>
         </mat-select>
     </mat-form-field>
@@ -25,8 +24,8 @@
         <div *ngFor='let key of JSObject.keys(barcodes)'  style="width:350px; margin:0 auto;padding:10px">
             <h2>{{barcodes[key].productName}}</h2>
             <p>{{barcodes[key].productDescription}}</p>
-            <img src="{{barcodes[key].productImageUrl}}" width="300" height="300" />
-            <img src="{{barcodes[key].barcodeImageUrl}}" width="300" height="300" />
+            <img src="{{barcodes[key].productImageUrl}}" width="300" height="300" style="padding:10px"/>
+            <img src="{{barcodes[key].barcodeImageUrl}}" width="300" height="300" style="padding:10px"/>
             <br/>
         </div>
     </div>
