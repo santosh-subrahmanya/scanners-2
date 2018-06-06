@@ -1,4 +1,5 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
+
 <div class="jumbotron">
     <div class="container">
         <h1 class="display-3">Barcodes for {{barcodes[0]?.company}}</h1>
@@ -10,13 +11,14 @@
     </div>
 </div>
 
-<div style="padding: 7px">
-    <mat-form-field>
-        <mat-select [(ngModel)]="selected" name="cat" placeholder="Choose Category"  (change)="filterProducts($event)">
-            <mat-option *ngFor="let cat of category" [value]="cat">{{ cat }}</mat-option>
-        </mat-select>
-    </mat-form-field>
-</div>
+
+    <div style="padding:20px">
+        <mat-form-field>
+            <mat-select [(ngModel)]="selected" name="cat" placeholder="Choose Category"  (change)="filterProducts($event)">
+                <mat-option *ngFor="let cat of category" [value]="cat">{{ cat }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
 
 <div>
     <!-- Example row of columns -->
