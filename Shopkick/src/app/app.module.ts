@@ -57,6 +57,7 @@ import {
 import { BarcodeFilterPipe } from './pipes/BarcodeFilter.pipe';
 import { BarcodeService } from './services/barcode.service';
 import { Http, HttpModule } from '@angular/Http';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -95,7 +96,7 @@ import { Http, HttpModule } from '@angular/Http';
     MatTooltipModule,
     ],
   imports:      [ BrowserModule, FormsModule, routing, HttpClientModule, BrowserAnimationsModule, MatSelectModule, HttpModule ],
-  declarations: [ AppComponent, HelloComponent, AppLayoutComponent, SiteLayoutComponent, AppHeaderComponent, SiteHeaderComponent, SiteFooterComponent, LoginComponent, DashboardComponent, HomeComponent, AboutComponent, RegisterComponent, ProfileComponent, BarcodeComponent, BarcodeFilterPipe ],
+  declarations: [ AppComponent, HelloComponent, AppLayoutComponent, SiteLayoutComponent, AppHeaderComponent, SiteHeaderComponent, SiteFooterComponent, LoginComponent, DashboardComponent, HomeComponent, AboutComponent, RegisterComponent, ProfileComponent, BarcodeComponent, BarcodeFilterPipe, AdminComponent ],
   providers: [BarcodeService],
   bootstrap:    [ AppComponent, BarcodeComponent ],
   
