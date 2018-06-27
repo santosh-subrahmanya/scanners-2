@@ -15,7 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { routing } from './app.routing';
 import { BarcodeComponent } from './barcode/barcode.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -58,6 +58,11 @@ import { BarcodeFilterPipe } from './pipes/BarcodeFilter.pipe';
 import { BarcodeService } from './services/barcode.service';
 import { Http, HttpModule } from '@angular/Http';
 import { AdminComponent } from './admin/admin.component';
+import { AuthGuard } from './auth/auth.guard';
+import { AuthService } from './services/auth.service';
+import { UserService } from './services/user.service';
+import { JwtInterceptor } from './helpers/jwt.interceptor';
+import { fakeBackendProvider } from './helpers/fake-backend';
 
 
 @NgModule({
@@ -97,7 +102,14 @@ import { AdminComponent } from './admin/admin.component';
     ],
   imports:      [ BrowserModule, FormsModule, routing, HttpClientModule, BrowserAnimationsModule, MatSelectModule, HttpModule ],
   declarations: [ AppComponent, HelloComponent, AppLayoutComponent, SiteLayoutComponent, AppHeaderComponent, SiteHeaderComponent, SiteFooterComponent, LoginComponent, DashboardComponent, HomeComponent, AboutComponent, RegisterComponent, ProfileComponent, BarcodeComponent, BarcodeFilterPipe, AdminComponent ],
-  providers: [BarcodeService],
+  providers: [BarcodeService, AuthGuard, AuthService, UserService, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: JwtInterceptor,
+    multi: true
+},
+ 
+// providers used to create fake backend
+fakeBackendProvider],
   bootstrap:    [ AppComponent, BarcodeComponent ],
   
 })

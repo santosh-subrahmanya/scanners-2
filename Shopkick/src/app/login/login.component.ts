@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import 'rxjs/add/operator/first';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +9,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  model: any = {};
+  loading = false;
+  returnUrl: string;
+  error = '';
 
-  constructor() { }
+  constructor(
+      private route: ActivatedRoute,
+      private router: Router,
+      private authenticationService: AuthService) { }
 
   ngOnInit() {
+
+      alert('Logging out of the app !!!')
+      // reset login status
+      this.authenticationService.logout();
+
+      // get return url from route parameters or default to '/'
+      this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+  }
+
+  login() {
+      this.loading = true;
+      this.authenticationService.login(this.model.username, this.model.password)
+          .first()
+          .subscribe(
+              data => {
+                  this.router.navigate([this.returnUrl]);
+              },
+              error => {
+                  this.error = error;
+                  this.loading = false;
+              });
   }
 
 }

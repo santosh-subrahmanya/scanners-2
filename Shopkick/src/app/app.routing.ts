@@ -12,6 +12,8 @@ import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BarcodeComponent } from './barcode/barcode.component';
+import { AdminComponent } from './admin/admin.component';
+import { AuthGuard } from './auth/auth.guard';
 
 
 const appRoutes: Routes = [
@@ -24,7 +26,9 @@ const appRoutes: Routes = [
           { path: 'about', component: AboutComponent },
           { path: 'test/:id', component: AboutComponent },
           { path: 'barcode', component: BarcodeComponent,  pathMatch: 'full' },
-          { path: 'barcode/:company', component: BarcodeComponent,  pathMatch: 'full' }
+          { path: 'barcode/:company', component: BarcodeComponent,  pathMatch: 'full' },
+          { path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
+          { path: 'login', component: LoginComponent }
         ]
     },
     
@@ -36,7 +40,8 @@ const appRoutes: Routes = [
           { path: 'dashboard', component: DashboardComponent },
           { path: 'profile', component: ProfileComponent },
           { path: 'barcode', component: BarcodeComponent,  pathMatch: 'full' },
-          { path: 'barcode/:company', component: BarcodeComponent }
+          { path: 'barcode/:company', component: BarcodeComponent },
+          { path: 'admin', component: AdminComponent, canActivate: [AuthGuard]}
         ]
     },
 
@@ -44,6 +49,7 @@ const appRoutes: Routes = [
     { path: 'login', component: LoginComponent},
     { path: 'register', component: RegisterComponent },
     { path: 'barcode/:company', component: BarcodeComponent },
+    { path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
     
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

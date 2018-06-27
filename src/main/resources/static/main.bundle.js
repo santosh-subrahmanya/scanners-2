@@ -333,7 +333,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/about/about.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "    <!-- Main jumbotron for a primary marketing message or call to action -->\n    <div class=\"jumbotron\">\n      <div class=\"container\">\n        <h1 class=\"display-3\">How it works  </h1>\n        <p>\n          Want to earn Shopkick points by not walking to the stores to scan products? \n         Someone has just made your job easier by scanning and uploading barcodes for products across\n         all your favorite shopping destinations. All you have to do is select your store and the required product category and \n         start using the required barcode to scan and earn shopkick points.\n          \n        </p>\n        <p><a (click)=\"home()\" class=\"btn btn-primary btn-lg\" role=\"button\">Search Barcodes &raquo;</a></p>\n      </div>\n    </div>\n\n    <div class=\"container\">\n      <!-- Example row of columns -->\n      <div class=\"row\">\n        <div class=\"col-md-4\">\n          <h2>Heading</h2>\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n        </div>\n        <div class=\"col-md-4\">\n          <h2>Heading</h2>\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n       </div>\n        <div class=\"col-md-4\">\n          <h2>Heading</h2>\n          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n        </div>\n      </div>\n\n      <hr>\n\n      \n    </div> <!-- /container -->\n    "
+module.exports = "    <!-- Main jumbotron for a primary marketing message or call to action -->\n    <div class=\"jumbotron\">\n      <div class=\"container\">\n        <h1 class=\"display-3\">How it works  </h1>\n        <p>\n          Want to earn Shopkick points by not walking to the stores to scan and upload products info to Shopkick? \n         Someone has just made your job easier by scanning and uploading barcodes for products across\n         all your favorite shopping destinations. All you have to do is select your store and the product category and \n         start using the barcodes to scan and upload to shopkick to earn shopkick points.\n          \n        </p>\n        <p><a (click)=\"home()\" class=\"btn btn-primary btn-lg\" role=\"button\">Search Barcodes &raquo;</a></p>\n      </div>\n    </div>\n\n    <div class=\"container\">\n      <!-- Example row of columns -->\n      <div class=\"row\">\n        <div class=\"col-md-4\">\n          <h2>Heading</h2>\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n        </div>\n        <div class=\"col-md-4\">\n          <h2>Heading</h2>\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n       </div>\n        <div class=\"col-md-4\">\n          <h2>Heading</h2>\n          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n        </div>\n      </div>\n\n      <hr>\n\n      \n    </div> <!-- /container -->\n    "
 
 /***/ }),
 
@@ -373,6 +373,65 @@ AboutComponent = __decorate([
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
 ], AboutComponent);
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/admin/admin.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/admin/admin.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  admin works! Yahooooooooooô11o\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/admin/admin.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm2015/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+let AdminComponent = class AdminComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+AdminComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'app-admin',
+        template: __webpack_require__("../../../../../src/app/admin/admin.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/admin/admin.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], AdminComponent);
 
 
 
@@ -463,12 +522,24 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pipes_BarcodeFilter_pipe__ = __webpack_require__("../../../../../src/app/pipes/BarcodeFilter.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_barcode_service__ = __webpack_require__("../../../../../src/app/services/barcode.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__angular_Http__ = __webpack_require__("../../../Http/esm2015/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__admin_admin_component__ = __webpack_require__("../../../../../src/app/admin/admin.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__auth_auth_guard__ = __webpack_require__("../../../../../src/app/auth/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__helpers_jwt_interceptor__ = __webpack_require__("../../../../../src/app/helpers/jwt.interceptor.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__helpers_fake_backend__ = __webpack_require__("../../../../../src/app/helpers/fake-backend.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
 
 
 
@@ -532,9 +603,15 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_21__angular_material__["E" /* MatToolbarModule */],
             __WEBPACK_IMPORTED_MODULE_21__angular_material__["F" /* MatTooltipModule */],
         ],
-        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_18__app_routing__["a" /* routing */], __WEBPACK_IMPORTED_MODULE_17__angular_common_http__["b" /* HttpClientModule */], __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */], __WEBPACK_IMPORTED_MODULE_21__angular_material__["v" /* MatSelectModule */], __WEBPACK_IMPORTED_MODULE_24__angular_Http__["b" /* HttpModule */]],
-        declarations: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_5__hello_component__["a" /* HelloComponent */], __WEBPACK_IMPORTED_MODULE_6__layout_app_layout_app_layout_component__["a" /* AppLayoutComponent */], __WEBPACK_IMPORTED_MODULE_7__layout_site_layout_site_layout_component__["a" /* SiteLayoutComponent */], __WEBPACK_IMPORTED_MODULE_8__layout_app_header_app_header_component__["a" /* AppHeaderComponent */], __WEBPACK_IMPORTED_MODULE_9__layout_site_header_site_header_component__["a" /* SiteHeaderComponent */], __WEBPACK_IMPORTED_MODULE_10__layout_site_footer_site_footer_component__["a" /* SiteFooterComponent */], __WEBPACK_IMPORTED_MODULE_11__login_login_component__["a" /* LoginComponent */], __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_13__home_home_component__["a" /* HomeComponent */], __WEBPACK_IMPORTED_MODULE_14__about_about_component__["a" /* AboutComponent */], __WEBPACK_IMPORTED_MODULE_15__register_register_component__["a" /* RegisterComponent */], __WEBPACK_IMPORTED_MODULE_16__profile_profile_component__["a" /* ProfileComponent */], __WEBPACK_IMPORTED_MODULE_19__barcode_barcode_component__["a" /* BarcodeComponent */], __WEBPACK_IMPORTED_MODULE_22__pipes_BarcodeFilter_pipe__["a" /* BarcodeFilterPipe */]],
-        providers: [__WEBPACK_IMPORTED_MODULE_23__services_barcode_service__["a" /* BarcodeService */]],
+        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_18__app_routing__["a" /* routing */], __WEBPACK_IMPORTED_MODULE_17__angular_common_http__["c" /* HttpClientModule */], __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */], __WEBPACK_IMPORTED_MODULE_21__angular_material__["v" /* MatSelectModule */], __WEBPACK_IMPORTED_MODULE_24__angular_Http__["b" /* HttpModule */]],
+        declarations: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_5__hello_component__["a" /* HelloComponent */], __WEBPACK_IMPORTED_MODULE_6__layout_app_layout_app_layout_component__["a" /* AppLayoutComponent */], __WEBPACK_IMPORTED_MODULE_7__layout_site_layout_site_layout_component__["a" /* SiteLayoutComponent */], __WEBPACK_IMPORTED_MODULE_8__layout_app_header_app_header_component__["a" /* AppHeaderComponent */], __WEBPACK_IMPORTED_MODULE_9__layout_site_header_site_header_component__["a" /* SiteHeaderComponent */], __WEBPACK_IMPORTED_MODULE_10__layout_site_footer_site_footer_component__["a" /* SiteFooterComponent */], __WEBPACK_IMPORTED_MODULE_11__login_login_component__["a" /* LoginComponent */], __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_13__home_home_component__["a" /* HomeComponent */], __WEBPACK_IMPORTED_MODULE_14__about_about_component__["a" /* AboutComponent */], __WEBPACK_IMPORTED_MODULE_15__register_register_component__["a" /* RegisterComponent */], __WEBPACK_IMPORTED_MODULE_16__profile_profile_component__["a" /* ProfileComponent */], __WEBPACK_IMPORTED_MODULE_19__barcode_barcode_component__["a" /* BarcodeComponent */], __WEBPACK_IMPORTED_MODULE_22__pipes_BarcodeFilter_pipe__["a" /* BarcodeFilterPipe */], __WEBPACK_IMPORTED_MODULE_25__admin_admin_component__["a" /* AdminComponent */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_23__services_barcode_service__["a" /* BarcodeService */], __WEBPACK_IMPORTED_MODULE_26__auth_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_27__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_28__services_user_service__["a" /* UserService */], {
+                provide: __WEBPACK_IMPORTED_MODULE_17__angular_common_http__["a" /* HTTP_INTERCEPTORS */],
+                useClass: __WEBPACK_IMPORTED_MODULE_29__helpers_jwt_interceptor__["a" /* JwtInterceptor */],
+                multi: true
+            },
+            // providers used to create fake backend
+            __WEBPACK_IMPORTED_MODULE_30__helpers_fake_backend__["a" /* fakeBackendProvider */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_19__barcode_barcode_component__["a" /* BarcodeComponent */]],
     })
 ], AppModule);
@@ -557,6 +634,10 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__ = __webpack_require__("../../../../../src/app/profile/profile.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__ = __webpack_require__("../../../../../src/app/barcode/barcode.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__admin_admin_component__ = __webpack_require__("../../../../../src/app/admin/admin.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__auth_auth_guard__ = __webpack_require__("../../../../../src/app/auth/auth.guard.ts");
+
+
 
 
 
@@ -576,7 +657,9 @@ const appRoutes = [
             { path: 'about', component: __WEBPACK_IMPORTED_MODULE_4__about_about_component__["a" /* AboutComponent */] },
             { path: 'test/:id', component: __WEBPACK_IMPORTED_MODULE_4__about_about_component__["a" /* AboutComponent */] },
             { path: 'barcode', component: __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__["a" /* BarcodeComponent */], pathMatch: 'full' },
-            { path: 'barcode/:company', component: __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__["a" /* BarcodeComponent */], pathMatch: 'full' }
+            { path: 'barcode/:company', component: __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__["a" /* BarcodeComponent */], pathMatch: 'full' },
+            { path: 'admin', component: __WEBPACK_IMPORTED_MODULE_10__admin_admin_component__["a" /* AdminComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard__["a" /* AuthGuard */]] },
+            { path: 'login', component: __WEBPACK_IMPORTED_MODULE_5__login_login_component__["a" /* LoginComponent */] }
         ]
     },
     // App routes goes here here
@@ -587,18 +670,64 @@ const appRoutes = [
             { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_7__dashboard_dashboard_component__["a" /* DashboardComponent */] },
             { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__["a" /* ProfileComponent */] },
             { path: 'barcode', component: __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__["a" /* BarcodeComponent */], pathMatch: 'full' },
-            { path: 'barcode/:company', component: __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__["a" /* BarcodeComponent */] }
+            { path: 'barcode/:company', component: __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__["a" /* BarcodeComponent */] },
+            { path: 'admin', component: __WEBPACK_IMPORTED_MODULE_10__admin_admin_component__["a" /* AdminComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard__["a" /* AuthGuard */]] }
         ]
     },
     //no layout routes
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_5__login_login_component__["a" /* LoginComponent */] },
     { path: 'register', component: __WEBPACK_IMPORTED_MODULE_6__register_register_component__["a" /* RegisterComponent */] },
     { path: 'barcode/:company', component: __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__["a" /* BarcodeComponent */] },
+    { path: 'admin', component: __WEBPACK_IMPORTED_MODULE_10__admin_admin_component__["a" /* AdminComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard__["a" /* AuthGuard */]] },
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];
 const routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule */].forRoot(appRoutes, { useHash: true, enableTracing: true });
 /* harmony export (immutable) */ __webpack_exports__["a"] = routing;
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/auth/auth.guard.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthGuard; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm2015/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm2015/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+let AuthGuard = class AuthGuard {
+    constructor(auth, router) {
+        this.auth = auth;
+        this.router = router;
+    }
+    canActivate(next, state) {
+        alert('Inside AuthGuard !!!!');
+        if (localStorage.getItem('currentUser')) {
+            // logged in so return true
+            return true;
+        }
+        // not logged in and hence redirect the user to the login page
+        this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
+    }
+};
+AuthGuard = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
+], AuthGuard);
 
 
 
@@ -691,7 +820,7 @@ BarcodeComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/barcode/barcode.component.html"),
         styles: [__webpack_require__("../../../../../src/app/barcode/barcode.component.css")]
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_3__services_barcode_service__["a" /* BarcodeService */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_3__services_barcode_service__["a" /* BarcodeService */]])
 ], BarcodeComponent);
 
 
@@ -791,6 +920,125 @@ HelloComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/helpers/fake-backend.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export FakeBackendInterceptor */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return fakeBackendProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm2015/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm2015/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm2015/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_of__ = __webpack_require__("../../../../rxjs/_esm2015/add/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_throw__ = __webpack_require__("../../../../rxjs/_esm2015/add/observable/throw.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_delay__ = __webpack_require__("../../../../rxjs/_esm2015/add/operator/delay.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_mergeMap__ = __webpack_require__("../../../../rxjs/_esm2015/add/operator/mergeMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_materialize__ = __webpack_require__("../../../../rxjs/_esm2015/add/operator/materialize.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_dematerialize__ = __webpack_require__("../../../../rxjs/_esm2015/add/operator/dematerialize.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+let FakeBackendInterceptor = class FakeBackendInterceptor {
+    constructor() { }
+    intercept(request, next) {
+        let testUser = { id: 1, username: 'admin', password: '@dmini$tr@tor', firstName: 'Admin', lastName: 'User' };
+        // wrap in delayed observable to simulate server api call
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["a" /* Observable */].of(null).mergeMap(() => {
+            // authenticate
+            if (request.url.endsWith('/api/authenticate') && request.method === 'POST') {
+                if (request.body.username === testUser.username && request.body.password === testUser.password) {
+                    // if login details are valid return 200 OK with a fake jwt token
+                    return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["a" /* Observable */].of(new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpResponse */]({ status: 200, body: { token: 'fake-jwt-token' } }));
+                }
+                else {
+                    // else return 400 bad request
+                    return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["a" /* Observable */].throw('Username or password is incorrect');
+                }
+            }
+            // get users
+            if (request.url.endsWith('/api/users') && request.method === 'GET') {
+                // check for fake auth token in header and return users if valid, this security is implemented server side in a real application
+                if (request.headers.get('Authorization') === 'Bearer fake-jwt-token') {
+                    return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["a" /* Observable */].of(new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpResponse */]({ status: 200, body: [testUser] }));
+                }
+                else {
+                    // return 401 not authorised if token is null or invalid
+                    return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["a" /* Observable */].throw('Unauthorised');
+                }
+            }
+            // pass through any requests not handled above
+            return next.handle(request);
+        })
+            .materialize()
+            .delay(500)
+            .dematerialize();
+    }
+};
+FakeBackendInterceptor = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [])
+], FakeBackendInterceptor);
+
+let fakeBackendProvider = {
+    // use fake backend in place of Http service for backend-less development
+    provide: __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HTTP_INTERCEPTORS */],
+    useClass: FakeBackendInterceptor,
+    multi: true
+};
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/helpers/jwt.interceptor.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JwtInterceptor; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm2015/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+let JwtInterceptor = class JwtInterceptor {
+    intercept(request, next) {
+        // add authorization header with jwt token if available
+        let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (currentUser && currentUser.token) {
+            request = request.clone({
+                setHeaders: {
+                    Authorization: `Bearer ${currentUser.token}`
+                }
+            });
+        }
+        return next.handle(request);
+    }
+};
+JwtInterceptor = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])()
+], JwtInterceptor);
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/home/home.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -812,7 +1060,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "    <!-- Main jumbotron for a primary marketing message or call to action -->\n    <div class=\"jumbotron\">\n      <div class=\"container\">\n        <h2 class=\"display-3\">Check out barcode here.....</h2>\n        <p>Check out these barcodes that you can start scanning to earn shopkick points across all your favorite shopping destinations</p>\n        <p><a (click)=\"howItWorks()\" class=\"btn btn-primary btn-lg\"  role=\"button\">Learn more &raquo;</a></p>\n      </div>\n    </div>\n\n    <div class=\"container\">\n      <!-- Example row of columns -->\n      <div class=\"row\">\n        <div class=\"col-md-4\" *ngFor=\"let comp of company\">\n            <h2>{{comp.name}}</h2>\n            <p>{{comp.description}}</p>\n            <!-- <p>{{comp.imageUrl}}</p> -->\n            <img src = \"{{comp.imageUrl}}\" width=\"200\" height=\"200\">\n          <p><a (click)=\"showAllBarcodes(comp.name)\" class=\"btn btn-secondary\"  role=\"button\">View all barcodes &raquo;</a></p>\n        </div>\n        <!-- <div class=\"col-md-4\">\n          <h2>Most Popular</h2>\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n       </div>\n        <div class=\"col-md-4\">\n          <h2>Most Popular</h2>\n          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n        </div> -->\n      </div>\n\n      <!-- <div class=\"container\" *ngFor=\"let comp of company\">\n          <div class=\"row\">\n            <div class=\"col-md-4\" class=\"row\"> \n              <h2>{{comp.name}}</h2>\n              <p>{{comp.description}}</p>\n               <p>{{comp.imageUrl}}</p> \n              <img src = \"{{comp.imageUrl}}\" width=\"200\" height=\"200\">\n              <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View all Barcodes &raquo;</a></p>\n            </div>\n          </div>\n      </div> -->\n    <!-- </div> -->\n      \n\n\n\n      <hr>\n\n      \n    </div> <!-- /container -->\n    "
+module.exports = "    <!-- Main jumbotron for a primary marketing message or call to action -->\n    <div class=\"jumbotron\">\n      <div class=\"container\">\n        <h2 class=\"display-3\">Check out barcodes here.....</h2>\n        <p>Check out these barcodes that you can start scanning to earn shopkick points across all your favorite shopping destinations</p>\n        <p><a (click)=\"howItWorks()\" class=\"btn btn-primary btn-lg\"  role=\"button\">Learn more &raquo;</a></p>\n      </div>\n    </div>\n\n    <div class=\"container\">\n      <!-- Example row of columns -->\n      <div class=\"row\">\n        <div class=\"col-md-4\" *ngFor=\"let comp of company\">\n            <h2>{{comp.name}}</h2>\n            <p>{{comp.description}}</p>\n            <!-- <p>{{comp.imageUrl}}</p> -->\n            <img src = \"{{comp.imageUrl}}\" width=\"200\" height=\"200\">\n          <p><a (click)=\"showAllBarcodes(comp.name)\" class=\"btn btn-secondary\"  role=\"button\">View all barcodes &raquo;</a></p>\n        </div>\n        <!-- <div class=\"col-md-4\">\n          <h2>Most Popular</h2>\n          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n       </div>\n        <div class=\"col-md-4\">\n          <h2>Most Popular</h2>\n          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n          <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View details &raquo;</a></p>\n        </div> -->\n      </div>\n\n      <!-- <div class=\"container\" *ngFor=\"let comp of company\">\n          <div class=\"row\">\n            <div class=\"col-md-4\" class=\"row\"> \n              <h2>{{comp.name}}</h2>\n              <p>{{comp.description}}</p>\n               <p>{{comp.imageUrl}}</p> \n              <img src = \"{{comp.imageUrl}}\" width=\"200\" height=\"200\">\n              <p><a class=\"btn btn-secondary\" href=\"#\" role=\"button\">View all Barcodes &raquo;</a></p>\n            </div>\n          </div>\n      </div> -->\n    <!-- </div> -->\n      \n\n\n\n      <hr>\n\n      \n    </div> <!-- /container -->\n    "
 
 /***/ }),
 
@@ -873,7 +1121,7 @@ HomeComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/home/home.component.html"),
         styles: [__webpack_require__("../../../../../src/app/home/home.component.css")]
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
 ], HomeComponent);
 
 
@@ -901,7 +1149,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\n      <form class=\"form-signin\">\n        <h2 class=\"form-signin-heading\">Please sign in</h2>\n        <label for=\"inputEmail\" class=\"sr-only\">Email address</label>\n        <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Email address\" required autofocus>\n        <label for=\"inputPassword\" class=\"sr-only\">Password</label>\n        <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Password\" required>\n        <div class=\"checkbox\">\n          <label>\n            <input type=\"checkbox\" value=\"remember-me\"> Remember me\n          </label>\n        </div>\n        <button class=\"btn btn-lg btn-primary btn-block\" type=\"button\">Sign in</button>\n\n        <ul class=\"navbar-nav mr-auto\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLink=\"/\">Home<small>(Site layout)</small></a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLink=\"/about\">About<small>(Site layout)</small></a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLink=\"/login\">Login Page<small>(No layout)</small></a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLink=\"/register\">Register Page<small>(No layout)</small></a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLink=\"/dashboard\">Dashboard<small>(App layout)</small></a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" routerLink=\"/profile\">Profile<small>(App layout)</small></a>\n          </li>\n        </ul>\n      </form>\n\n    </div> <!-- /container -->\n<style>\n.form-signin {\n  max-width: 330px;\n  padding: 15px;\n  margin: 0 auto;\n}\n.form-signin .form-signin-heading,\n.form-signin .checkbox {\n  margin-bottom: 10px;\n}\n.form-signin .checkbox {\n  font-weight: normal;\n}\n.form-signin .form-control {\n  position: relative;\n  height: auto;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  padding: 10px;\n  font-size: 16px;\n}\n.form-signin .form-control:focus {\n  z-index: 2;\n}\n.form-signin input[type=\"email\"] {\n  margin-bottom: -1px;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.form-signin input[type=\"password\"] {\n  margin-bottom: 10px;\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n}\n</style>"
+module.exports = "<div class=\"col-md-6 col-md-offset-3\">\n  <div class=\"alert alert-info\">\n      Username: test<br />\n      Password: test\n  </div>\n  <h2>Login</h2>\n  <form name=\"form\" (ngSubmit)=\"f.form.valid && login()\" #f=\"ngForm\" novalidate>\n      <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !username.valid }\">\n          <label for=\"username\">Username</label>\n          <input type=\"text\" class=\"form-control\" name=\"username\" [(ngModel)]=\"model.username\" #username=\"ngModel\" required />\n          <div *ngIf=\"f.submitted && !username.valid\" class=\"help-block\">Username is required</div>\n      </div>\n      <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\">\n          <label for=\"password\">Password</label>\n          <input type=\"password\" class=\"form-control\" name=\"password\" [(ngModel)]=\"model.password\" #password=\"ngModel\" required />\n          <div *ngIf=\"f.submitted && !password.valid\" class=\"help-block\">Password is required</div>\n      </div>\n      <div class=\"form-group\">\n          <button [disabled]=\"loading\" class=\"btn btn-primary\">Login</button>\n          <img *ngIf=\"loading\" src=\"data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==\" />\n      </div>\n      <div *ngIf=\"error\" class=\"alert alert-danger\">{{error}}</div>\n  </form>\n</div>"
 
 /***/ }),
 
@@ -911,6 +1159,9 @@ module.exports = "<div class=\"container\">\n\n      <form class=\"form-signin\"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm2015/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm2015/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_first__ = __webpack_require__("../../../../rxjs/_esm2015/add/operator/first.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -921,9 +1172,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 let LoginComponent = class LoginComponent {
-    constructor() { }
+    constructor(route, router, authenticationService) {
+        this.route = route;
+        this.router = router;
+        this.authenticationService = authenticationService;
+        this.model = {};
+        this.loading = false;
+        this.error = '';
+    }
     ngOnInit() {
+        alert('Logging out of the app !!!');
+        // reset login status
+        this.authenticationService.logout();
+        // get return url from route parameters or default to '/'
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    }
+    login() {
+        this.loading = true;
+        this.authenticationService.login(this.model.username, this.model.password)
+            .first()
+            .subscribe(data => {
+            this.router.navigate([this.returnUrl]);
+        }, error => {
+            this.error = error;
+            this.loading = false;
+        });
     }
 };
 LoginComponent = __decorate([
@@ -932,7 +1209,9 @@ LoginComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/login/login.component.html"),
         styles: [__webpack_require__("../../../../../src/app/login/login.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
+        __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
+        __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]])
 ], LoginComponent);
 
 
@@ -953,7 +1232,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 
 let BarcodeFilterPipe = class BarcodeFilterPipe {
-    transform() {
+    transform(input, args) {
+        var output = [];
+        for (var i = 0; i < input.length; i++) {
+            if (input[i].productCategory === args) {
+                output.push(input[i]);
+            }
+        }
+        return output;
     }
 };
 BarcodeFilterPipe = __decorate([
@@ -1085,6 +1371,54 @@ RegisterComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/services/auth.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm2015/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm2015/http.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+let AuthService = class AuthService {
+    constructor(http) {
+        this.http = http;
+    }
+    login(username, password) {
+        return this.http.post('/api/authenticate', { username: username, password: password })
+            .map(user => {
+            // login successful if there's a jwt token in the response
+            if (user && user.token) {
+                // store user details and jwt token in local storage to keep user logged in between page refreshes
+                localStorage.setItem('currentUser', JSON.stringify(user));
+            }
+            return user;
+        });
+    }
+    logout() {
+        // remove user from local storage to log user out
+        alert('Logout method of AuthService');
+        localStorage.removeItem('currentUser');
+    }
+};
+AuthService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]])
+], AuthService);
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/services/barcode.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1152,6 +1486,41 @@ BarcodeService = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_Http__["a" /* Http */]])
 ], BarcodeService);
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/user.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm2015/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm2015/http.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+let UserService = class UserService {
+    constructor(http) {
+        this.http = http;
+    }
+    getAll() {
+        return this.http.get('/api/users');
+    }
+};
+UserService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]])
+], UserService);
 
 
 
