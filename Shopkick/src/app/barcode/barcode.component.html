@@ -24,11 +24,13 @@
     <!-- Example row of columns -->
     <div class="row">
         <div *ngFor='let key of JSObject.keys(barcodes)'  style="width:350px; margin:0 auto;padding:10px">
-            <h2>{{barcodes[key].productName}}</h2>
-            <p>{{barcodes[key].productDescription}}</p>
-            <img src="{{barcodes[key].productImageUrl}}" width="300" height="300" style="padding:10px"/>
-            <img src="{{barcodes[key].barcodeImageUrl}}" width="300" height="300" style="padding:10px"/>
-            <br/>
+            <div *ngIf='barcodes[key].archived == false'>
+                <h2>{{barcodes[key].productName}}</h2>
+                <p>{{barcodes[key].productDescription}}</p>
+                <img src="{{barcodes[key].productImageUrl}}" width="300" height="300" style="padding:10px"/>
+                <img src="{{barcodes[key].barcodeImageUrl}}" width="300" height="300" style="padding:10px"/>
+                <br/>
+            </div>
         </div>
     </div>
 

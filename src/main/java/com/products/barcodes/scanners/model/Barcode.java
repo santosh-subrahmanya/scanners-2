@@ -12,6 +12,7 @@ public class Barcode {
 	private String productImageUrl;
 	private String barcodeImageUrl;
 	private String company;
+	private boolean archived;
 	
 	public String getId() {
 		return id;
@@ -68,5 +69,16 @@ public class Barcode {
 	public void setBarcodeImageUrl(String barcodeImageUrl) {
 		this.barcodeImageUrl = barcodeImageUrl;
 	}
-	
+
+	public boolean isArchived() {
+		return archived;
+	}
+
+	public void setArchived(boolean archived) {
+		this.archived = archived;
+	}
+
+	public void setProductCategory(String productCategory) {
+		this.productCategory = productCategory;
+	}
 }
