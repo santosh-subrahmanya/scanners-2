@@ -399,7 +399,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/admin/admin.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  admin works! Yahooooooooooô11o\n</p>\n"
+module.exports = "<!-- Main jumbotron for a primary marketing message or call to action -->\n<!-- <div class=\"jumbotron\">\n    <div class=\"container\">\n        <h2 class=\"display-3\">Check barcodes here.....</h2>\n        <p>Check out these barcodes that you can start scanning to earn shopkick points across all your favorite shopping destinations</p>\n        <p>\n            <a (click)=\"howItWorks()\" class=\"btn btn-primary btn-lg\" role=\"button\">Learn more &raquo;</a>\n        </p>\n    </div>\n</div> -->\n\n<div class=\"jumbotron\">\n    <h2>Store Details</h2>\n    <div class=\"container\" *ngFor=\"let comp of company\">\n        <div class=\"row\">\n            <div class=\"col-md-4\" class=\"row\">\n                <div>Store Name : <input type=\"text\" name=\"name\" value=\"{{comp.name}}\" /></div>\n                <div>Store Description: <input type=\"text\" name=\"description\" value=\"{{comp.description}}\" /></div>\n                <div>Store Image Url : <input type=\"text\" name=\"imageUrl\" value=\"{{comp.imageUrl}}\" /></div>\n              \n                \n            </div>\n        </div>\n    </div>\n\n\n\n\n\n    <hr>\n\n\n</div>\n<!-- /container -->"
 
 /***/ }),
 
@@ -409,6 +409,9 @@ module.exports = "<p>\n  admin works! Yahooooooooooô11o\n</p>\n"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm2015/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm2015/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("../../../common/esm2015/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_company_service__ = __webpack_require__("../../../../../src/app/services/company.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -419,9 +422,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
+// import {
+//   Ng4FilesStatus,
+//   Ng4FilesSelected
+// } from './ng4-files';
 let AdminComponent = class AdminComponent {
-    constructor() { }
+    constructor(http, route, companyService) {
+        this.http = http;
+        this.route = route;
+        this.companyService = companyService;
+        this.loading = false;
+    }
     ngOnInit() {
+        //alert('About to navigate to file upload');
+        // Get all the stores and barcodes details
+        //this.router.navigate(['file-upload']);
+        this.companyService.getAllStores().subscribe(data => {
+            this.loading = false;
+            this.company = data;
+        });
+        ;
+        console.log('Company list is :' + this.company);
     }
 };
 AdminComponent = __decorate([
@@ -430,8 +454,218 @@ AdminComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/admin/admin.component.html"),
         styles: [__webpack_require__("../../../../../src/app/admin/admin.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
+        __WEBPACK_IMPORTED_MODULE_3__services_company_service__["a" /* CompanyService */]])
 ], AdminComponent);
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/admin/file/file-upload/file-upload.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/admin/file/file-upload/file-upload.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div draggable=\"true\" ngClass=\"{{dragAreaClass}}\">\n    <div class=\"row\">\n      <div class=\"col-md-12 text-center\" >\n        <a href=\"javascript:void(0)\" (click)=\"file.click()\" >\n          Click to browse \n        </a>\n        Or Drag & Drop to upload your files\n        <input type=\"file\" \n               #file \n               [multiple]=\"(maxFiles > 1)\"\n               (change) = \"onFileChange($event)\"\n               style=\"display:none\" />\n      </div>\n    </div>\n  \n  </div>\n  <div class=\"row error\" *ngIf=\"errors.length > 0\">    \n    <ul>\n      <li *ngFor=\"let err of errors\">{{err}}</li>\n    </ul>\n  </div>  "
+
+/***/ }),
+
+/***/ "../../../../../src/app/admin/file/file-upload/file-upload.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FileUploadComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm2015/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_file_service__ = __webpack_require__("../../../../../src/app/services/file.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+let FileUploadComponent = class FileUploadComponent {
+    constructor(fileService) {
+        this.fileService = fileService;
+        this.errors = [];
+        this.dragAreaClass = 'dragarea';
+        this.name = "";
+        this.description = "";
+        this.fileExt = "JPG, PNG";
+        this.maxFiles = 5;
+        this.maxSize = 5; // 5MB
+        this.uploadStatus = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+    }
+    ngOnInit() {
+    }
+    onFileChange(event) {
+        let files = event.target.files;
+        this.saveFiles(files);
+    }
+    onDragOver(event) {
+        this.dragAreaClass = "droparea";
+        event.preventDefault();
+    }
+    onDragEnter(event) {
+        this.dragAreaClass = "droparea";
+        event.preventDefault();
+    }
+    onDragEnd(event) {
+        this.dragAreaClass = "dragarea";
+        event.preventDefault();
+    }
+    onDragLeave(event) {
+        this.dragAreaClass = "dragarea";
+        event.preventDefault();
+    }
+    onDrop(event) {
+        this.dragAreaClass = "dragarea";
+        event.preventDefault();
+        event.stopPropagation();
+        var files = event.dataTransfer.files;
+        this.saveFiles(files);
+    }
+    saveFiles(files) {
+        this.errors = []; // Clear error
+        // Validate file size and allowed extensions
+        if (files.length > 0 && (!this.isValidFiles(files))) {
+            this.uploadStatus.emit(false);
+            return;
+        }
+        if (files.length > 0) {
+            let formData = new FormData();
+            for (var j = 0; j < files.length; j++) {
+                formData.append("file[]", files[j], files[j].name);
+            }
+            var parameters = {
+                name: this.name,
+                description: this.description
+            };
+            this.fileService.upload(formData, parameters)
+                .subscribe(success => {
+                this.uploadStatus.emit(true);
+                console.log(success);
+            }, error => {
+                this.uploadStatus.emit(true);
+                this.errors.push(error.ExceptionMessage);
+            });
+        }
+    }
+    isValidFiles(files) {
+        // Check Number of files
+        if (files.length > this.maxFiles) {
+            this.errors.push("Error: At a time you can upload only " + this.maxFiles + " files");
+            return;
+        }
+        this.isValidFileExtension(files);
+        return this.errors.length === 0;
+    }
+    isValidFileExtension(files) {
+        // Make array of file extensions
+        var extensions = (this.fileExt.split(','))
+            .map(function (x) { return x.toLocaleUpperCase().trim(); });
+        for (var i = 0; i < files.length; i++) {
+            // Get file extension
+            var ext = files[i].name.toUpperCase().split('.').pop() || files[i].name;
+            // Check the extension exists
+            var exists = extensions.includes(ext);
+            if (!exists) {
+                this.errors.push("Error (Extension): " + files[i].name);
+            }
+            // Check file size
+            this.isValidFileSize(files[i]);
+        }
+    }
+    isValidFileSize(file) {
+        var fileSizeinMB = file.size / (1024 * 1000);
+        var size = Math.round(fileSizeinMB * 100) / 100; // convert upto 2 decimal place
+        if (size > this.maxSize)
+            this.errors.push("Error (File Size): " + file.name + ": exceed file size limit of " + this.maxSize + "MB ( " + size + "MB )");
+    }
+};
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+    __metadata("design:type", String)
+], FileUploadComponent.prototype, "name", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+    __metadata("design:type", String)
+], FileUploadComponent.prototype, "description", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+    __metadata("design:type", String)
+], FileUploadComponent.prototype, "fileExt", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+    __metadata("design:type", Number)
+], FileUploadComponent.prototype, "maxFiles", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+    __metadata("design:type", Number)
+], FileUploadComponent.prototype, "maxSize", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Output */])(),
+    __metadata("design:type", Object)
+], FileUploadComponent.prototype, "uploadStatus", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* HostListener */])('dragover', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], FileUploadComponent.prototype, "onDragOver", null);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* HostListener */])('dragenter', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], FileUploadComponent.prototype, "onDragEnter", null);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* HostListener */])('dragend', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], FileUploadComponent.prototype, "onDragEnd", null);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* HostListener */])('dragleave', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], FileUploadComponent.prototype, "onDragLeave", null);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* HostListener */])('drop', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], FileUploadComponent.prototype, "onDrop", null);
+FileUploadComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'app-file-upload',
+        template: __webpack_require__("../../../../../src/app/admin/file/file-upload/file-upload.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/admin/file/file-upload/file-upload.component.css")]
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_file_service__["a" /* FileService */]])
+], FileUploadComponent);
 
 
 
@@ -528,12 +762,18 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__helpers_jwt_interceptor__ = __webpack_require__("../../../../../src/app/helpers/jwt.interceptor.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__helpers_fake_backend__ = __webpack_require__("../../../../../src/app/helpers/fake-backend.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__admin_file_file_upload_file_upload_component__ = __webpack_require__("../../../../../src/app/admin/file/file-upload/file-upload.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__services_file_service__ = __webpack_require__("../../../../../src/app/services/file.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__services_company_service__ = __webpack_require__("../../../../../src/app/services/company.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -604,8 +844,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_21__angular_material__["F" /* MatTooltipModule */],
         ],
         imports: [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_18__app_routing__["a" /* routing */], __WEBPACK_IMPORTED_MODULE_17__angular_common_http__["c" /* HttpClientModule */], __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */], __WEBPACK_IMPORTED_MODULE_21__angular_material__["v" /* MatSelectModule */], __WEBPACK_IMPORTED_MODULE_24__angular_Http__["b" /* HttpModule */]],
-        declarations: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_5__hello_component__["a" /* HelloComponent */], __WEBPACK_IMPORTED_MODULE_6__layout_app_layout_app_layout_component__["a" /* AppLayoutComponent */], __WEBPACK_IMPORTED_MODULE_7__layout_site_layout_site_layout_component__["a" /* SiteLayoutComponent */], __WEBPACK_IMPORTED_MODULE_8__layout_app_header_app_header_component__["a" /* AppHeaderComponent */], __WEBPACK_IMPORTED_MODULE_9__layout_site_header_site_header_component__["a" /* SiteHeaderComponent */], __WEBPACK_IMPORTED_MODULE_10__layout_site_footer_site_footer_component__["a" /* SiteFooterComponent */], __WEBPACK_IMPORTED_MODULE_11__login_login_component__["a" /* LoginComponent */], __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_13__home_home_component__["a" /* HomeComponent */], __WEBPACK_IMPORTED_MODULE_14__about_about_component__["a" /* AboutComponent */], __WEBPACK_IMPORTED_MODULE_15__register_register_component__["a" /* RegisterComponent */], __WEBPACK_IMPORTED_MODULE_16__profile_profile_component__["a" /* ProfileComponent */], __WEBPACK_IMPORTED_MODULE_19__barcode_barcode_component__["a" /* BarcodeComponent */], __WEBPACK_IMPORTED_MODULE_22__pipes_BarcodeFilter_pipe__["a" /* BarcodeFilterPipe */], __WEBPACK_IMPORTED_MODULE_25__admin_admin_component__["a" /* AdminComponent */]],
-        providers: [__WEBPACK_IMPORTED_MODULE_23__services_barcode_service__["a" /* BarcodeService */], __WEBPACK_IMPORTED_MODULE_26__auth_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_27__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_28__services_user_service__["a" /* UserService */], {
+        declarations: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_5__hello_component__["a" /* HelloComponent */], __WEBPACK_IMPORTED_MODULE_6__layout_app_layout_app_layout_component__["a" /* AppLayoutComponent */], __WEBPACK_IMPORTED_MODULE_7__layout_site_layout_site_layout_component__["a" /* SiteLayoutComponent */], __WEBPACK_IMPORTED_MODULE_8__layout_app_header_app_header_component__["a" /* AppHeaderComponent */], __WEBPACK_IMPORTED_MODULE_9__layout_site_header_site_header_component__["a" /* SiteHeaderComponent */], __WEBPACK_IMPORTED_MODULE_10__layout_site_footer_site_footer_component__["a" /* SiteFooterComponent */], __WEBPACK_IMPORTED_MODULE_11__login_login_component__["a" /* LoginComponent */], __WEBPACK_IMPORTED_MODULE_12__dashboard_dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_13__home_home_component__["a" /* HomeComponent */], __WEBPACK_IMPORTED_MODULE_14__about_about_component__["a" /* AboutComponent */], __WEBPACK_IMPORTED_MODULE_15__register_register_component__["a" /* RegisterComponent */], __WEBPACK_IMPORTED_MODULE_16__profile_profile_component__["a" /* ProfileComponent */], __WEBPACK_IMPORTED_MODULE_19__barcode_barcode_component__["a" /* BarcodeComponent */], __WEBPACK_IMPORTED_MODULE_22__pipes_BarcodeFilter_pipe__["a" /* BarcodeFilterPipe */], __WEBPACK_IMPORTED_MODULE_25__admin_admin_component__["a" /* AdminComponent */], __WEBPACK_IMPORTED_MODULE_31__admin_file_file_upload_file_upload_component__["a" /* FileUploadComponent */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_23__services_barcode_service__["a" /* BarcodeService */], __WEBPACK_IMPORTED_MODULE_26__auth_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_27__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_28__services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_32__services_file_service__["a" /* FileService */], __WEBPACK_IMPORTED_MODULE_33__services_company_service__["a" /* CompanyService */], {
                 provide: __WEBPACK_IMPORTED_MODULE_17__angular_common_http__["a" /* HTTP_INTERCEPTORS */],
                 useClass: __WEBPACK_IMPORTED_MODULE_29__helpers_jwt_interceptor__["a" /* JwtInterceptor */],
                 multi: true
@@ -636,6 +876,8 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__ = __webpack_require__("../../../../../src/app/barcode/barcode.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__admin_admin_component__ = __webpack_require__("../../../../../src/app/admin/admin.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__auth_auth_guard__ = __webpack_require__("../../../../../src/app/auth/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__admin_file_file_upload_file_upload_component__ = __webpack_require__("../../../../../src/app/admin/file/file-upload/file-upload.component.ts");
+
 
 
 
@@ -659,7 +901,8 @@ const appRoutes = [
             { path: 'barcode', component: __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__["a" /* BarcodeComponent */], pathMatch: 'full' },
             { path: 'barcode/:company', component: __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__["a" /* BarcodeComponent */], pathMatch: 'full' },
             { path: 'admin', component: __WEBPACK_IMPORTED_MODULE_10__admin_admin_component__["a" /* AdminComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard__["a" /* AuthGuard */]] },
-            { path: 'login', component: __WEBPACK_IMPORTED_MODULE_5__login_login_component__["a" /* LoginComponent */] }
+            { path: 'login', component: __WEBPACK_IMPORTED_MODULE_5__login_login_component__["a" /* LoginComponent */] },
+            { path: 'file-upload', component: __WEBPACK_IMPORTED_MODULE_12__admin_file_file_upload_file_upload_component__["a" /* FileUploadComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard__["a" /* AuthGuard */]] },
         ]
     },
     // App routes goes here here
@@ -671,7 +914,8 @@ const appRoutes = [
             { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_8__profile_profile_component__["a" /* ProfileComponent */] },
             { path: 'barcode', component: __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__["a" /* BarcodeComponent */], pathMatch: 'full' },
             { path: 'barcode/:company', component: __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__["a" /* BarcodeComponent */] },
-            { path: 'admin', component: __WEBPACK_IMPORTED_MODULE_10__admin_admin_component__["a" /* AdminComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard__["a" /* AuthGuard */]] }
+            { path: 'admin', component: __WEBPACK_IMPORTED_MODULE_10__admin_admin_component__["a" /* AdminComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard__["a" /* AuthGuard */]] },
+            { path: 'file-upload', component: __WEBPACK_IMPORTED_MODULE_12__admin_file_file_upload_file_upload_component__["a" /* FileUploadComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard__["a" /* AuthGuard */]] }
         ]
     },
     //no layout routes
@@ -679,6 +923,7 @@ const appRoutes = [
     { path: 'register', component: __WEBPACK_IMPORTED_MODULE_6__register_register_component__["a" /* RegisterComponent */] },
     { path: 'barcode/:company', component: __WEBPACK_IMPORTED_MODULE_9__barcode_barcode_component__["a" /* BarcodeComponent */] },
     { path: 'admin', component: __WEBPACK_IMPORTED_MODULE_10__admin_admin_component__["a" /* AdminComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'file-upload', component: __WEBPACK_IMPORTED_MODULE_12__admin_file_file_upload_file_upload_component__["a" /* FileUploadComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard__["a" /* AuthGuard */]] },
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];
@@ -802,7 +1047,7 @@ let BarcodeComponent = class BarcodeComponent {
             this.barcodes.forEach(element => {
                 this.categorySet.add(element.productCategory);
             });
-            this.category = Array.from(this.categorySet);
+            this.category = Array.from(this.categorySet).sort();
             this.barcodes = data;
             console.log('Category is ' + this.category);
         });
@@ -1486,6 +1731,109 @@ BarcodeService = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_Http__["a" /* Http */]])
 ], BarcodeService);
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/company.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompanyService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm2015/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_Http__ = __webpack_require__("../../../Http/esm2015/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm2015/Observable.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+let CompanyService = class CompanyService {
+    constructor(http) {
+        this.http = http;
+    }
+    getAllStores() {
+        let apiURL = '/companyDetails';
+        return this.http
+            .get(apiURL)
+            .map((response) => {
+            return response.json();
+        })
+            .catch(this.handleError);
+    }
+    handleError(error) {
+        // In a real world app, we might use a remote logging infrastructure
+        // We'd also dig deeper into the error to get a better message
+        let errMsg = (error.message) ? error.message :
+            error.status ? `${error.status} - ${error.statusText}` : 'Server error';
+        console.error(errMsg); // log to console instead
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["a" /* Observable */].throw(errMsg);
+    }
+};
+CompanyService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_Http__["a" /* Http */]])
+], CompanyService);
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/file.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FileService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm2015/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__ = __webpack_require__("../../../../rxjs/_esm2015/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm2015/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__("../../../../rxjs/_esm2015/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__("../../../common/esm2015/http.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+let FileService = class FileService {
+    constructor(http) {
+        this.http = http;
+        this._baseURL = '/fileupload/';
+    }
+    upload(files, parameters) {
+        //let headers = new Headers();
+        // let options = new RequestOptions();
+        // options.params = parameters;
+        return this.http.post(this._baseURL + 'upload', files, parameters)
+            .map(response => response)
+            .catch(error => __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__["a" /* Observable */].throw(error));
+    }
+    getImages() {
+        return this.http.get(this._baseURL + "getimages")
+            .map(response => response)
+            .catch(error => __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__["a" /* Observable */].throw(error));
+    }
+};
+FileService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClient */]])
+], FileService);
 
 
 

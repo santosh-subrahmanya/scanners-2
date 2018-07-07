@@ -45,7 +45,7 @@ export class BarcodeComponent implements OnInit {
 
         this.categorySet.add(element.productCategory);
       });
-      this.category = Array.from(this.categorySet);
+      this.category = Array.from(this.categorySet).sort();
       this.barcodes = data;
       console.log('Category is ' + this.category);
     });

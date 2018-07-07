@@ -14,6 +14,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { BarcodeComponent } from './barcode/barcode.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './auth/auth.guard';
+import { FileUploadComponent } from './admin/file/file-upload/file-upload.component';
 
 
 const appRoutes: Routes = [
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
           { path: 'barcode', component: BarcodeComponent,  pathMatch: 'full' },
           { path: 'barcode/:company', component: BarcodeComponent,  pathMatch: 'full' },
           { path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
-          { path: 'login', component: LoginComponent }
+          { path: 'login', component: LoginComponent },
+          { path: 'file-upload', component: FileUploadComponent, canActivate: [AuthGuard]},
         ]
     },
     
@@ -41,7 +43,8 @@ const appRoutes: Routes = [
           { path: 'profile', component: ProfileComponent },
           { path: 'barcode', component: BarcodeComponent,  pathMatch: 'full' },
           { path: 'barcode/:company', component: BarcodeComponent },
-          { path: 'admin', component: AdminComponent, canActivate: [AuthGuard]}
+          { path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
+          { path: 'file-upload', component: FileUploadComponent, canActivate: [AuthGuard]}
         ]
     },
 
@@ -50,6 +53,7 @@ const appRoutes: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'barcode/:company', component: BarcodeComponent },
     { path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
+    { path: 'file-upload', component: FileUploadComponent, canActivate: [AuthGuard]},
     
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

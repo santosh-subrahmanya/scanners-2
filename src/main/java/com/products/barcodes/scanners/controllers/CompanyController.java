@@ -41,7 +41,7 @@ public class CompanyController {
 	 */
 	@RequestMapping(method=RequestMethod.POST, value="company")
 	public Company save(@RequestBody Company company) {
-		return companyRepository.save(company);
+		return companyService.save(company);
 	}
 	
 

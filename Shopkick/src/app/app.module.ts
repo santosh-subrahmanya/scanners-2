@@ -63,6 +63,9 @@ import { AuthService } from './services/auth.service';
 import { UserService } from './services/user.service';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { fakeBackendProvider } from './helpers/fake-backend';
+import { FileUploadComponent } from './admin/file/file-upload/file-upload.component';
+import { FileService } from './services/file.service';
+import { CompanyService } from './services/company.service';
 
 
 @NgModule({
@@ -101,8 +104,8 @@ import { fakeBackendProvider } from './helpers/fake-backend';
     MatTooltipModule,
     ],
   imports:      [ BrowserModule, FormsModule, routing, HttpClientModule, BrowserAnimationsModule, MatSelectModule, HttpModule ],
-  declarations: [ AppComponent, HelloComponent, AppLayoutComponent, SiteLayoutComponent, AppHeaderComponent, SiteHeaderComponent, SiteFooterComponent, LoginComponent, DashboardComponent, HomeComponent, AboutComponent, RegisterComponent, ProfileComponent, BarcodeComponent, BarcodeFilterPipe, AdminComponent ],
-  providers: [BarcodeService, AuthGuard, AuthService, UserService, {
+  declarations: [ AppComponent, HelloComponent, AppLayoutComponent, SiteLayoutComponent, AppHeaderComponent, SiteHeaderComponent, SiteFooterComponent, LoginComponent, DashboardComponent, HomeComponent, AboutComponent, RegisterComponent, ProfileComponent, BarcodeComponent, BarcodeFilterPipe, AdminComponent, FileUploadComponent ],
+  providers: [BarcodeService, AuthGuard, AuthService, UserService, FileService, CompanyService, {
     provide: HTTP_INTERCEPTORS,
     useClass: JwtInterceptor,
     multi: true
