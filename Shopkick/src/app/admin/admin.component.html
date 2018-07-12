@@ -35,36 +35,36 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
+            <a class="nav-link" href="#" (click)="showAllStores()">
+              <i class="material-icons">stores</i>
+              <p>Stores</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
+          <!-- <li class="nav-item ">
+            <a class="nav-link" href="#">
               <i class="material-icons">person</i>
               <p>User Profile</p>
             </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#" (click)="showAllStores()">
               <i class="material-icons">content_paste</i>
-              <p>Table List</p>
+              <p>Stores</p>
             </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./typography.html">
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#" (click)="showProducts()">
               <i class="material-icons">library_books</i>
-              <p>Typography</p>
+              <p>Products and Barcodes</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
+            <a class="nav-link" href="#">
               <i class="material-icons">bubble_chart</i>
               <p>Icons</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="./map.html">
               <i class="material-icons">location_ons</i>
               <p>Maps</p>
@@ -75,7 +75,7 @@
               <i class="material-icons">notifications</i>
               <p>Notifications</p>
             </a>
-          </li>
+          </li> -->
           <!-- <li class="nav-item active-pro ">
                 <a class="nav-link" href="./upgrade.html">
                     <i class="material-icons">unarchive</i>
@@ -149,9 +149,9 @@
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <!-- <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card card-stats">
-                <div class="card-header card-header-warning card-header-icon">
+                <!-- <div class="card-header card-header-warning card-header-icon">
                   <div class="card-icon">
                     <i class="material-icons">content_copy</i>
                   </div>
@@ -159,16 +159,16 @@
                   <h3 class="card-title">49/50
                     <small>GB</small>
                   </h3>
-                </div>
-                <div class="card-footer">
+                </div> -->
+                <!-- <div class="card-footer">
                   <div class="stats">
                     <i class="material-icons text-danger">warning</i>
                     <a href="#pablo">Get More Space...</a>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+              </div> -->
+            <!-- </div> --> 
+            <!-- <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card card-stats">
                 <div class="card-header card-header-success card-header-icon">
                   <div class="card-icon">
@@ -183,8 +183,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            </div> -->
+            <!-- <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card card-stats">
                 <div class="card-header card-header-danger card-header-icon">
                   <div class="card-icon">
@@ -199,8 +199,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            </div> -->
+            <!-- <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card card-stats">
                 <div class="card-header card-header-info card-header-icon">
                   <div class="card-icon">
@@ -215,9 +215,9 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="row">
+            </div> -->
+          <!-- </div> -->
+          <!-- <div class="row">
             <div class="col-md-4">
               <div class="card card-chart">
                 <div class="card-header card-header-success">
@@ -267,9 +267,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="row">
-            <div class="col-lg-6 col-md-12">
+            <!-- <div class="col-lg-6 col-md-12">
               <div class="card">
                 <div class="card-header card-header-tabs card-header-primary">
                   <div class="nav-tabs-navigation">
@@ -513,55 +513,40 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="col-lg-6 col-md-12">
               <div class="card">
                 <div class="card-header card-header-warning">
-                  <h4 class="card-title">Employees Stats</h4>
-                  <p class="card-category">New employees on 15th September, 2016</p>
+                  <h4 class="card-title">Stores</h4>
+                  <p class="card-category">All available stores</p>
                 </div>
                 <div class="card-body table-responsive">
                   <table class="table table-hover">
                     <thead class="text-warning">
-                      <th>ID</th>
-                      <th>Name</th>
-                      <th>Salary</th>
-                      <th>Country</th>
+                      <!-- <th>ID</th> -->
+                      <th>Store Name</th>
+                      <th>Description</th>
+                      <th>Image</th>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>1</td>
-                        <td>Dakota Rice</td>
-                        <td>$36,738</td>
+                        <td>Walmart</td>
+                        <td>Walmart Store</td>
                         <td>Niger</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Minerva Hooper</td>
-                        <td>$23,789</td>
-                        <td>Curaçao</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>Sage Rodriguez</td>
-                        <td>$56,142</td>
-                        <td>Netherlands</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>Philip Chaney</td>
-                        <td>$38,735</td>
-                        <td>Korea, South</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+                <div>
+                  <a class="btn btn-primary btn-lg" style="color:ffa726" href="#" role="button">Add Store</a>
+                </div>
               </div>
             </div>
+           
           </div>
         </div>
       </div>
-      <footer class="footer">
+      <!-- <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">
             <ul>
@@ -587,15 +572,15 @@
               </li>
             </ul>
           </nav>
-          <div class="copyright float-right">
+          <!-- <div class="copyright float-right">
             &copy;
             <script>
               document.write(new Date().getFullYear())
             </script>, made with <i class="material-icons">favorite</i> by
             <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
-          </div>
-        </div>
-      </footer>
+          </div> -->
+        </div> 
+      <!-- </footer> --> 
     </div>
   </div>
   <!--   Core JS Files   -->
@@ -620,6 +605,7 @@
 
     });
   </script>
+  
 </body>
 
 </html>
