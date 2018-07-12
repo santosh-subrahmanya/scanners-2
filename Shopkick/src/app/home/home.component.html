@@ -11,11 +11,11 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4" *ngFor="let comp of company">
-            <h2>{{comp.name}}</h2>
-            <p>{{comp.description}}</p>
+            <h3>{{comp.name}}</h3>
+            <!-- <p>{{comp.description}}</p> -->
             <!-- <p>{{comp.imageUrl}}</p> -->
             <img src = "{{comp.imageUrl}}" width="200" height="200">
-          <p><a (click)="showAllBarcodes(comp.name)" class="btn btn-secondary"  role="button">View all barcodes &raquo;</a></p>
+          <p><a (click)="showAllBarcodes(comp.name)" class="btn.btn-primary"  role="button">View all barcodes &raquo;</a></p>
         </div>
         <!-- <div class="col-md-4">
           <h2>Most Popular</h2>
