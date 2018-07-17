@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5b4592492af44b4a1522be19"},"name":"Walmart","description":"Walmart Store","imageUrl":"/assets/images/company/Walmart.png"}
+{"_id":{"$oid":"5b4592722af44b4a1522be1a"},"name":"Bestbuy","description":"Bustbuy Store","imageUrl":"/assets/images/company/Bestbuy.png"}
