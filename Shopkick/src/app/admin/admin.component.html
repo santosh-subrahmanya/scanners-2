@@ -58,13 +58,13 @@
               <p>Products and Barcodes</p>
             </a>
           </li>
-          <li class="nav-item ">
+         <!--  <li class="nav-item ">
             <a class="nav-link" href="#">
               <i class="material-icons">bubble_chart</i>
               <p>Icons</p>
             </a>
           </li>
-          <!-- <li class="nav-item ">
+          <li class="nav-item ">
             <a class="nav-link" href="./map.html">
               <i class="material-icons">location_ons</i>
               <p>Maps</p>
@@ -529,10 +529,10 @@
                       <th>Image</th>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>Walmart</td>
-                        <td>Walmart Store</td>
-                        <td>Niger</td>
+                      <tr *ngFor="let comp of company">
+                        <td>{{comp.name}}</td>
+                        <td>{{comp.description}}</td>
+                        <td>{{comp.imageUrl}}</td>
                       </tr>
                     </tbody>
                   </table>
