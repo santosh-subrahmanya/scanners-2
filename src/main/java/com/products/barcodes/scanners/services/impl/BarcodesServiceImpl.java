@@ -28,7 +28,7 @@ public class BarcodesServiceImpl implements BarcodesService {
 		Query query = new Query();
 		query.addCriteria(Criteria.where(ApplicationConstants.COMPANY).is(companyName));
 		if(null != category && !category.equals(ApplicationConstants.ALL)) {
-			query.addCriteria(Criteria.where(ApplicationConstants.CATEGORY).is(category));
+			query.addCriteria(Criteria.where(ApplicationConstants.CATEGORY).regex(category));
 		}
 		return (List<Barcode>) mongoTemplate.find(query, Barcode.class);
 	}
