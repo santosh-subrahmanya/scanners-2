@@ -72,16 +72,16 @@ export class FileUploadComponent implements OnInit {
               name: this.name,
               description: this.description
           }
-          this.fileService.upload(formData, parameters)
-              .subscribe(
-              success => {
-                this.uploadStatus.emit(true);
-                console.log(success)
-              },
-              error => {
-                  this.uploadStatus.emit(true);
-                  this.errors.push(error.ExceptionMessage);
-              }) 
+          // this.fileService.upload(formData, parameters)
+          //     .subscribe(
+          //     success => {
+          //       this.uploadStatus.emit(true);
+          //       console.log(success)
+          //     },
+          //     error => {
+          //         this.uploadStatus.emit(true);
+          //         this.errors.push(error.ExceptionMessage);
+          //     }) 
       } 
   }
 

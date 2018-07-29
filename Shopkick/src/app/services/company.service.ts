@@ -1,6 +1,7 @@
+
+import {throwError as observableThrowError,  Observable } from 'rxjs';
 import { Injectable } from "@angular/core";
 import { Http, Response} from "@angular/Http";
-import { Observable } from "rxjs/Observable";
 import { Store } from "../shared/models/store.model";
 
 @Injectable()
@@ -16,7 +17,7 @@ export class CompanyService {
                 .map((response: Response) => {
                     return <Store[]>response.json();
                 })
-                .catch(this.handleError);
+                //.catch(this.handleError);
         }
 
         private handleError(error:any) {
@@ -25,6 +26,6 @@ export class CompanyService {
             let errMsg = (error.message) ? error.message :
                 error.status ? `${error.status} - ${error.statusText}` : 'Server error';
             console.error(errMsg); // log to console instead
-            return Observable.throw(errMsg);
+            return observableThrowError(errMsg);
         }
 }

@@ -4,11 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { MatSelect, MatOption } from '@angular/material';
 import { MatSelectModule } from '@angular/material/select';
 
-import { Observable } from 'rxjs/Observable';
 import { BarcodeService } from '../services/barcode.service';
-import { Barcode } from '../shared/models/Barcode.model';
-
-
+import { Barcode } from '../shared/models/barcode.model';   
 
 @Component({
   selector: 'app-barcode',

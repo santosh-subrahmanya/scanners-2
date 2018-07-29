@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
-import 'rxjs/add/operator/first';
+
 
 @Component({
   selector: 'app-login',
@@ -29,18 +29,18 @@ export class LoginComponent implements OnInit {
       this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
-  login() {
-      this.loading = true;
-      this.authenticationService.login(this.model.username, this.model.password)
-          .first()
-          .subscribe(
-              data => {
-                  this.router.navigate([this.returnUrl]);
-              },
-              error => {
-                  this.error = error;
-                  this.loading = false;
-              });
-  }
+//   login() {
+//       this.loading = true;
+//       this.authenticationService.login(this.model.username, this.model.password)
+//           .first()
+//           .subscribe(
+//               data => {
+//                   this.router.navigate([this.returnUrl]);
+//               },
+//               error => {
+//                   this.error = error;
+//                   this.loading = false;
+//               });
+//   }
 
 }

@@ -1,9 +1,10 @@
+
+import {throwError as observableThrowError,  Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { Barcode } from '../shared/models/Barcode.model';
+import { Barcode } from '../shared/models/barcode.model';
 import { Response, HttpModule, Http } from '@angular/Http';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
+
+import 'rxjs/add/operator/map'
 import { error } from 'util';
 import { HttpClient } from '@angular/common/http';
 
@@ -22,7 +23,7 @@ export class BarcodeService {
              .map((response: Response) => {
                  return <Barcode[]>response.json();
              })
-             .catch(this.handleError);
+             
     // return this.http.get(apiURL).map(res => { 
     //   return res.json().results.map(item => { 
     //     return new Barcode( 
@@ -49,7 +50,7 @@ export class BarcodeService {
     let errMsg = (error.message) ? error.message :
         error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     console.error(errMsg); // log to console instead
-    return Observable.throw(errMsg);
+    return observableThrowError(errMsg);
   }
 
 }

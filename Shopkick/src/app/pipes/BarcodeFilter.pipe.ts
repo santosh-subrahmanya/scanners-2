@@ -1,5 +1,5 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import { Barcode } from '../shared/models/Barcode.model';
+import { Barcode } from '../shared/models/barcode.model';
 
 
 @Pipe({
